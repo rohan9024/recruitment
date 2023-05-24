@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <div className='w-screen h-screen'>
-      <div className='flex justify-between items-center p-10 ml-20 mr-20'>
+      {/* <div className='w-full flex justify-between items-center md:p-10 md:ml-20 md:mr-20'>
         <div className={`${raleway.className} text-3xl`} >
           <h1>ROHAN WANDRE</h1>
         </div>
@@ -54,37 +54,44 @@ export default function Home() {
           <h1>Resume</h1>
           <h1>About me</h1>
         </div>
+      </div> */}
+      <div className=' flex justify-center items-center mt-10 md:p-10 md:ml-20 md:mr-20'>
+        <div className={`${raleway.className} text-2xl md:text-3xl cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
+          <h1 className='text-center'>ROHAN WANDRE</h1>
+        </div>
+        <div className={`${manrope.className} hidden md:flex justify-evenly items-center font-medium md:w-64`}>
+          <h1 className='transition ease-in delay-150 hover:text-gray-300 text-gray-500 duration-300 cursor-pointer '>Resume</h1>
+          <h1 className=' transition ease-in delay-150  hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>About me</h1>
+        </div>
       </div>
-      <div className={`${manrope.className} flex flex-col space-y-8 ml-44 mr-44 mt-52`}>
-        <h1 className='font-medium text-2xl text-gray-500'>Hi, I'm Rohan,</h1>
-        <h1 className='font-bold text-4xl'> A Software Engineer
+      <div className={`${manrope.className} flex flex-col space-y-8 md:ml-44 md:mr-44 md:mt-52 mt-36 ml-4 mr-4`}>
+        <h1 className='font-medium md:text-2xl text-2xl text-gray-500'>Hi, I'm Rohan,</h1>
+        <h1 className='font-bold md:text-4xl text-3xl m-auto'> A Software Engineer
           based in Mumbai.
           I develop applications that
           help us get more out of
           life and work.</h1>
-        <h1 className='font-medium text-2xl text-blue-500'>Currently studying at SIES Graduate School of Technology</h1>
+        <h1 className='font-medium md:text-2xl text-blue-500 text-xl w-64 md:w-full '>Currently studying at SIES Graduate School of Technology</h1>
       </div>
-      <div className={`${manrope.className} flex flex-col space-y-8 ml-44 mr-44 mt-64`}>
+      <div className={`${manrope.className} flex flex-col justify-center items-center space-y-12 md:ml-44 md:mr-44 md:mt-64 mt-20 `}>
         <h1 className='font-bold text-4xl'>Latest Work</h1>
 
 
         {/* Netflix clone */}
-        <div className='flex border border-gray-100 rounded-lg shadow-2xl w-[1140px] h-[489px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[550px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
           <Image
             src={netflix}
             // width={667}
             // height={457}
             alt="Netflix Clone"
             // cover="true"
-            className='object-cover min-h-[457px] min-w-[667px] w-3/4'
+            // className='object-cover w-[400px] h-[300px] md:min-h-[457px] md:min-w-[667px] md:w-3/4 '
+            className='object-cover w-[400px] h-[300px] md:min-h-[488px]  md:w-3/4 '
           />
-          <div className={`${raleway.className} flex flex-col ml-10 mr-10 w-1/4 justify-center space-y-6 `}
+          <div className={`${raleway.className} flex flex-col ml-10 mr-10 md:w-1/4 justify-center space-y-7 mt-5`}>
 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
-          >
-            <h1 className='font-medium text-lg text-blue-500'>API | WEB DEVELOPMENT</h1>
-            <h1 className='font-medium text-4xl'>Netflix Clone</h1>
+            <h1 className='font-medium md:text-lg text-blue-500'>API | WEB DEVELOPMENT</h1>
+            <h1 className='font-medium text-2xl md:text-4xl'>Netflix Clone</h1>
             <div className='flex justify-start space-x-4'>
               <Image
                 src={firebase}
@@ -117,7 +124,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium text-xl'>View Repository</h1>
+              <h1 className='font-medium md:text-xl '>View Repository</h1>
             </div>
             {/* {
               isExpanded && (
@@ -135,24 +142,20 @@ export default function Home() {
 
 
         {/* News Fetcher */}
-
-        <div className='flex border border-gray-100 rounded-lg shadow-2xl w-[1140px] h-[489px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[550px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
           <Image
-            // src={ettara}
             src={newsfetcher}
             // width={667}
             // height={457}
             alt="Newsfetcher"
             // cover="true"
-            className='object-cover min-h-[457px] min-w-[667px] w-3/4'
+            // className='object-cover w-[400px] h-[300px] md:min-h-[457px] md:min-w-[667px] md:w-3/4 '
+            className='object-cover w-[400px] h-[300px] md:min-h-[488px]  md:w-3/4 '
           />
-          <div className={`${raleway.className} flex flex-col ml-10 mr-10 w-1/4 justify-center space-y-6 `}
+          <div className={`${raleway.className} flex flex-col ml-10 mr-10 md:w-1/4 justify-center space-y-7 mt-5`}>
 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
-          >
-            <h1 className='font-medium text-lg text-blue-500'>WEB DEVELOPMENT</h1>
-            <h1 className='font-medium text-4xl'>News Fetcher</h1>
+            <h1 className='font-medium md:text-lg text-blue-500'> WEB DEVELOPMENT</h1>
+            <h1 className='font-medium text-2xl md:text-4xl'>News Fetcher</h1>
             <div className='flex justify-start space-x-4'>
               <Image
                 src={fastapi}
@@ -183,8 +186,9 @@ export default function Home() {
                 className='object-contain rounded-full'
               />
             </div>
+
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium text-xl'>View Repository</h1>
+              <h1 className='font-medium md:text-xl '>View Repository</h1>
             </div>
             {/* {
               isExpanded && (
@@ -195,27 +199,26 @@ export default function Home() {
                   className='bg-blue-500 h-[4px] w-[200px]' />
               )
             } */}
+
+
           </div>
         </div>
 
-
         {/* Social Media Manager */}
-        <div className='flex border border-gray-100 rounded-lg shadow-2xl w-[1140px] h-[489px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
           <Image
             src={smm2}
             // width={667}
             // height={457}
             alt="Social Media Manager"
             // cover="true"
-            className='object-cover min-h-[457px] min-w-[667px] w-3/4'
+            // className='object-cover w-[400px] h-[300px] md:min-h-[457px] md:min-w-[667px] md:w-3/4 '
+            className='object-cover w-[400px] h-[300px] md:min-h-[488px]  md:w-3/4 '
           />
-          <div className={`${raleway.className} flex flex-col ml-10 mr-10 w-1/4 justify-center space-y-6 `}
+          <div className={`${raleway.className} flex flex-col ml-10 mr-10 md:w-1/4 justify-center space-y-7 mt-5`}>
 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
-          >
-            <h1 className='font-medium text-lg text-blue-500'>WEB DEVELOPMENT</h1>
-            <h1 className='font-medium text-4xl'>Social Media Manager</h1>
+            <h1 className='font-medium md:text-lg text-blue-500'> WEB DEVELOPMENT</h1>
+            <h1 className='font-medium text-2xl md:text-4xl'>Social Media Manager</h1>
             <div className='flex justify-start space-x-4'>
               <Image
                 src={firebase}
@@ -237,18 +240,18 @@ export default function Home() {
                 height={30}
                 alt="Facebook API"
                 className='object-contain rounded-full'
-              />  
-               <Image
-              src={ig}
-              width={30}
-              height={30}
-              alt="Graph API"
-              className='object-contain rounded-full'
-            />
+              />
+              <Image
+                src={ig}
+                width={30}
+                height={30}
+                alt="Graph API"
+                className='object-contain rounded-full'
+              />
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium text-xl'>View Repository</h1>
+              <h1 className='font-medium md:text-xl '>View Repository</h1>
             </div>
             {/* {
               isExpanded && (
@@ -259,27 +262,26 @@ export default function Home() {
                   className='bg-blue-500 h-[4px] w-[200px]' />
               )
             } */}
+
+
           </div>
         </div>
 
-
-        {/* Social Media Manager App */}
-        <div className='flex border border-gray-100 rounded-lg shadow-2xl w-[1140px] h-[489px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        {/* Social Media Manager App*/}
+        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
           <Image
             src={smm}
             // width={667}
             // height={457}
             alt="Social Media Manager App"
             // cover="true"
-            className='object-cover min-h-[457px] min-w-[667px] w-3/4'
+            // className='object-cover w-[400px] h-[300px] md:min-h-[457px] md:min-w-[667px] md:w-3/4 '
+            className='object-cover w-[400px] h-[300px] md:min-h-[488px]  md:w-3/4 '
           />
-          <div className={`${raleway.className} flex flex-col ml-10 mr-10 w-1/4 justify-center space-y-6 `}
+          <div className={`${raleway.className} flex flex-col ml-10 mr-10 md:w-1/4 justify-center space-y-7 mt-5`}>
 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
-          >
-            <h1 className='font-medium text-lg text-blue-500'>APP DEVELOPMENT</h1>
-            <h1 className='font-medium text-4xl'>Social Media Manager App</h1>
+            <h1 className='font-medium md:text-lg text-blue-500'> APP DEVELOPMENT</h1>
+            <h1 className='font-medium text-2xl md:text-4xl'>Social Media Manager App</h1>
             <div className='flex justify-start space-x-4'>
               <Image
                 src={firebase}
@@ -301,18 +303,18 @@ export default function Home() {
                 height={30}
                 alt="Facebook API"
                 className='object-contain rounded-full'
-              />  
-               <Image
-              src={ig}
-              width={30}
-              height={30}
-              alt="Graph API"
-              className='object-contain rounded-full'
-            />
+              />
+              <Image
+                src={ig}
+                width={30}
+                height={30}
+                alt="Graph API"
+                className='object-contain rounded-full'
+              />
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium text-xl'>View Repository</h1>
+              <h1 className='font-medium md:text-xl '>View Repository</h1>
             </div>
             {/* {
               isExpanded && (
@@ -323,29 +325,26 @@ export default function Home() {
                   className='bg-blue-500 h-[4px] w-[200px]' />
               )
             } */}
+
+
           </div>
         </div>
 
-
-
-
-        {/* Donation Box */}
-        <div className='flex border border-gray-100 rounded-lg shadow-2xl w-[1140px] h-[489px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        {/* Donation Box*/}
+        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
           <Image
             src={d3}
             // width={667}
             // height={457}
             alt="Donation Box"
             // cover="true"
-            className='object-cover min-h-[457px] min-w-[667px] w-3/4'
+            // className='object-cover w-[400px] h-[300px] md:min-h-[457px] md:min-w-[667px] md:w-3/4 '
+            className='object-cover w-[400px] h-[300px] md:min-h-[488px]  md:w-3/4 '
           />
-          <div className={`${raleway.className} flex flex-col ml-10 mr-10 w-1/4 justify-center space-y-6 `}
+          <div className={`${raleway.className} flex flex-col ml-10 mr-10 md:w-1/4 justify-center space-y-7 mt-5`}>
 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
-          >
-            <h1 className='font-medium text-lg text-blue-500'>WEB DEVELOPMENT</h1>
-            <h1 className='font-medium text-4xl'>Donation Box</h1>
+            <h1 className='font-medium md:text-lg text-blue-500'> WEB DEVELOPMENT</h1>
+            <h1 className='font-medium text-2xl md:text-4xl'>Donation Box</h1>
             <div className='flex justify-start space-x-4'>
               <Image
                 src={firebase}
@@ -355,10 +354,10 @@ export default function Home() {
                 className='object-contain rounded-full'
               />
               <Image
-                src={react}
-                width={30}
-                height={30}
-                alt="react icon"
+                src={nextjs}
+                width={60}
+                height={60}
+                alt="next js icon"
                 className='object-contain rounded-full'
               />
               <Image
@@ -367,18 +366,18 @@ export default function Home() {
                 height={30}
                 alt="Facebook API"
                 className='object-contain rounded-full'
-              />  
-               <Image
-              src={ig}
-              width={30}
-              height={30}
-              alt="Graph API"
-              className='object-contain rounded-full'
-            />
+              />
+              <Image
+                src={ig}
+                width={30}
+                height={30}
+                alt="Graph API"
+                className='object-contain rounded-full'
+              />
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium text-xl'>View Repository</h1>
+              <h1 className='font-medium md:text-xl '>View Repository</h1>
             </div>
             {/* {
               isExpanded && (
@@ -389,26 +388,29 @@ export default function Home() {
                   className='bg-blue-500 h-[4px] w-[200px]' />
               )
             } */}
+
+
           </div>
         </div>
 
-        {/* Spotify clone */}
-        <div className='flex border border-gray-100 rounded-lg shadow-2xl w-[1140px] h-[489px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+
+
+
+        {/* Spotify Clone*/}
+        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
           <Image
             src={spotify}
             // width={667}
             // height={457}
             alt="Spotify Clone"
             // cover="true"
-            className='object-cover min-h-[457px] min-w-[667px] w-3/4'
+            // className='object-cover w-[400px] h-[300px] md:min-h-[457px] md:min-w-[667px] md:w-3/4 '
+            className='object-cover w-[400px] h-[300px] md:min-h-[488px]  md:w-3/4 '
           />
-          <div className={`${raleway.className} flex flex-col ml-10 mr-10 w-1/4 justify-center space-y-6 `}
+          <div className={`${raleway.className} flex flex-col ml-10 mr-10 md:w-1/4 justify-center space-y-7 mt-5`}>
 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
-          >
-            <h1 className='font-medium text-lg text-blue-500'>API | WEB DEVELOPMENT</h1>
-            <h1 className='font-medium text-4xl'>Spotify Clone</h1>
+            <h1 className='font-medium md:text-lg text-blue-500'>API | WEB DEVELOPMENT</h1>
+            <h1 className='font-medium text-2xl md:text-4xl'>Spotify Clone</h1>
             <div className='flex justify-start space-x-4'>
               <Image
                 src={firebase}
@@ -441,7 +443,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium text-xl'>View Repository</h1>
+              <h1 className='font-medium md:text-xl '>View Repository</h1>
             </div>
             {/* {
               isExpanded && (
@@ -452,31 +454,28 @@ export default function Home() {
                   className='bg-blue-500 h-[4px] w-[200px]' />
               )
             } */}
+
+
           </div>
         </div>
 
 
-
-
         {/* Ettara */}
-        <div className='flex border border-gray-100 rounded-lg shadow-2xl w-[1140px] h-[489px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
           <Image
-            // src={ettara}
             src={mockup}
             // width={667}
             // height={457}
             alt="Ettarra Cafe"
             // cover="true"
-            className='object-cover min-h-[457px] min-w-[667px] w-3/4'
+            // className='object-cover w-[400px] h-[300px] md:min-h-[457px] md:min-w-[667px] md:w-3/4 '
+            className='object-cover w-[400px] h-[300px] md:min-h-[488px]  md:w-3/4 '
           />
-          <div className={`${raleway.className} flex flex-col ml-10 mr-10 w-1/4 justify-center space-y-6 `}
+          <div className={`${raleway.className} flex flex-col ml-10 mr-10 md:w-1/4 justify-center space-y-7 mt-5`}>
 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
-          >
-            <h1 className='font-medium text-lg text-blue-500'>APP DEVELOPMENT</h1>
-            <h1 className='font-medium text-4xl'>Ettarra Cafe</h1>
-            <div className='flex justify-start space-x-4'>
+            <h1 className='font-medium md:text-lg text-blue-500'>APP DEVELOPMENT</h1>
+            <h1 className='font-medium text-2xl md:text-4xl'>Ettarra Cafe</h1>
+            <div className='flex justify-start space-x-2'>
               <Image
                 src={firebase}
                 width={30}
@@ -501,7 +500,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium text-xl'>View Repository</h1>
+              <h1 className='font-medium md:text-xl '>View Repository</h1>
             </div>
             {/* {
               isExpanded && (
@@ -515,27 +514,23 @@ export default function Home() {
           </div>
         </div>
 
-
-        {/* Bus Tracking Application */}
-        <div className='flex border border-gray-100 rounded-lg shadow-2xl w-[1140px] h-[489px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+    {/* Bus Tracking Application */}
+    <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
           <Image
-            // src={ettara}
             src={bustrackingMockup}
             // width={667}
             // height={457}
-            alt="Netflix Clone"
+            alt="Bus Tracking Application "
             // cover="true"
-            className='object-cover min-h-[457px] min-w-[667px] w-3/4'
+            // className='object-cover w-[400px] h-[300px] md:min-h-[457px] md:min-w-[667px] md:w-3/4 '
+            className='object-cover w-[400px] h-[300px] md:min-h-[488px]  md:w-3/4 '
           />
-          <div className={`${raleway.className} flex flex-col ml-10 mr-10 w-1/4 justify-center space-y-6 `}
+          <div className={`${raleway.className} flex flex-col ml-10 mr-10 md:w-1/4 justify-center space-y-7 mt-5`}>
 
-            onMouseEnter={() => setIsExpanded(true)}
-            onMouseLeave={() => setIsExpanded(false)}
-          >
-            <h1 className='font-medium text-lg text-blue-500'>APP DEVELOPMENT</h1>
-            <h1 className='font-medium text-4xl'>Bus Tracking Application</h1>
-            <div className='flex justify-start space-x-4'>
-              <Image
+            <h1 className='font-medium md:text-lg text-blue-500'>APP DEVELOPMENT</h1>
+            <h1 className='font-medium text-2xl md:text-4xl'>Bus Tracking Application </h1>
+            <div className='flex justify-start space-x-2'>
+            <Image
                 src={firebase}
                 width={30}
                 height={30}
@@ -552,7 +547,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium text-xl'>View Repository</h1>
+              <h1 className='font-medium md:text-xl '>View Repository</h1>
             </div>
             {/* {
               isExpanded && (
@@ -565,7 +560,6 @@ export default function Home() {
             } */}
           </div>
         </div>
-
 
 
 

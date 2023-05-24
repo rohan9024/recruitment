@@ -14,3 +14,9 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
 }
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+}
