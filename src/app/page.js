@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from 'next/navigation'
 
 import Image from 'next/image'
 import { Inter } from 'next/font/google';
@@ -10,6 +11,10 @@ import firebase from "../../assets/firebase.png";
 import react from "../../assets/react.png";
 import postman from "../../assets/postman.png";
 import ganache from "../../assets/ganache.png";
+import youtube from "../../assets/youtube.png";
+import linkedin from "../../assets/linkedin.png";
+import github from "../../assets/github.png";
+import mail from "../../assets/mail.png";
 import newsfetcher from "../../assets/newsfetcher2.png";
 // import ettara from "../../assets/ettara.png";
 import mockup from "../../assets/mockup.png";
@@ -25,8 +30,9 @@ import d3 from "../../assets/d3.jpg";
 import bustrackingMockup from "../../assets/bustrackingMockup.png";
 import moviesdbapi from "../../assets/moviesdbapi.svg";
 // import react from "../../assets/react.png";
-import { easeOut, motion } from "framer-motion"
+import { easeOut, motion, useScroll } from "framer-motion"
 import { useState } from 'react';
+import Link from 'next/link';
 
 const raleway = Raleway({
   weight: ['400', '700'],
@@ -43,9 +49,11 @@ const manrope = Manrope({
 
 export default function Home() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const router = useRouter()
+  const [scrollProgress, setScrollProgress] = useState(true)
 
   return (
-    <div className='w-screen h-screen'>
+    <div className='w-screen '>
       {/* <div className='w-full flex justify-between items-center md:p-10 md:ml-20 md:mr-20'>
         <div className={`${raleway.className} text-3xl`} >
           <h1>ROHAN WANDRE</h1>
@@ -55,16 +63,25 @@ export default function Home() {
           <h1>About me</h1>
         </div>
       </div> */}
-      <div className=' flex justify-center items-center mt-10 md:p-10 md:ml-20 md:mr-20'>
-        <div className={`${raleway.className} text-2xl md:text-3xl cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
-          <h1 className='text-center'>ROHAN WANDRE</h1>
-        </div>
-        <div className={`${manrope.className} hidden md:flex justify-evenly items-center font-medium md:w-64`}>
-          <h1 className='transition ease-in delay-150 hover:text-gray-300 text-gray-500 duration-300 cursor-pointer '>Resume</h1>
-          <h1 className=' transition ease-in delay-150  hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>About me</h1>
-        </div>
+   <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className=' flex justify-center  items-center space-x-4 mt-10 md:p-10 md:ml-20 md:mr-20'>
+      <div className={`${raleway.className} text-xl md:text-3xl cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
+        <h1 className='text-center'>ROHAN WANDRE</h1>
       </div>
-      <div className={`${manrope.className} flex flex-col space-y-8 md:ml-44 md:mr-44 md:mt-52 mt-36 ml-4 mr-4`}>
+      <div className={`${manrope.className} hidden md:flex md:justify-evenly md:items-center md:font-medium md:w-64 `}>
+        <a href="https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing" className='transition ease-in delay-150 hover:text-gray-300 text-gray-500 duration-300 cursor-pointer '>Resume</a>
+        <h1 className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>About me</h1>
+      </div>
+    </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className={`${manrope.className} flex flex-col space-y-8 md:ml-44 md:mr-44 md:mt-52 mt-36 ml-4 mr-4`}>
         <h1 className='font-medium md:text-2xl text-2xl text-gray-500'>Hi, I'm Rohan,</h1>
         <h1 className='font-bold md:text-4xl text-3xl m-auto'> A Software Engineer
           based in Mumbai.
@@ -72,13 +89,22 @@ export default function Home() {
           help us get more out of
           life and work.</h1>
         <h1 className='font-medium md:text-2xl text-blue-500 text-xl w-64 md:w-full '>Currently studying at SIES Graduate School of Technology</h1>
-      </div>
+      </motion.div>
       <div className={`${manrope.className} flex flex-col justify-center items-center space-y-12 md:ml-44 md:mr-44 md:mt-64 mt-20 `}>
         <h1 className='font-bold text-4xl'>Latest Work</h1>
 
 
         {/* Netflix clone */}
-        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[550px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <motion.div
+          initial={{ opacity: 0.6 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          whileInView={{ opacity: 1 }}
+
+          className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[550px] '>
           <Image
             src={netflix}
             // width={667}
@@ -121,10 +147,17 @@ export default function Home() {
                 alt="postman icon"
                 className='object-contain rounded-full'
               />
+              <Image
+                src={youtube}
+                width={30}
+                height={30}
+                alt="youtube icon"
+                className='object-contain '
+              />
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium md:text-xl '>View Repository</h1>
+              <a href="https://github.com/rohan9024/netflix-clone" className='font-medium md:text-xl '>View Repository</a>
             </div>
             {/* {
               isExpanded && (
@@ -138,11 +171,19 @@ export default function Home() {
 
 
           </div>
-        </div>
+        </motion.div>
 
 
         {/* News Fetcher */}
-        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[550px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <motion.div
+          initial={{ opacity: 0.6 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          whileInView={{ opacity: 1 }}
+          className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[550px] '>
           <Image
             src={newsfetcher}
             // width={667}
@@ -188,7 +229,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium md:text-xl '>View Repository</h1>
+              <a href="" className='font-medium md:text-xl '>View Repository</a>
             </div>
             {/* {
               isExpanded && (
@@ -202,10 +243,18 @@ export default function Home() {
 
 
           </div>
-        </div>
+        </motion.div>
 
         {/* Social Media Manager */}
-        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <motion.div
+          initial={{ opacity: 0.6 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          whileInView={{ opacity: 1 }}
+          className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={smm2}
             // width={667}
@@ -251,7 +300,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium md:text-xl '>View Repository</h1>
+              <Link href="/social-media-manager" className='font-medium md:text-xl '>View Repository</Link>
             </div>
             {/* {
               isExpanded && (
@@ -265,10 +314,17 @@ export default function Home() {
 
 
           </div>
-        </div>
+        </motion.div>
 
         {/* Social Media Manager App*/}
-        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <motion.div initial={{ opacity: 0.6 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          whileInView={{ opacity: 1 }}
+          className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={smm}
             // width={667}
@@ -314,7 +370,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium md:text-xl '>View Repository</h1>
+              <Link href="/social-media-manager-app" className='font-medium md:text-xl '>View Repository</Link>
             </div>
             {/* {
               isExpanded && (
@@ -328,10 +384,18 @@ export default function Home() {
 
 
           </div>
-        </div>
+        </motion.div>
 
         {/* Donation Box*/}
-        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <motion.div
+          initial={{ opacity: 0.6 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          whileInView={{ opacity: 1 }}
+          className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px]  '>
           <Image
             src={d3}
             // width={667}
@@ -377,7 +441,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium md:text-xl '>View Repository</h1>
+              <a href="https://github.com/rohan9024/donation-box" className='font-medium md:text-xl'>View Repository</a>
             </div>
             {/* {
               isExpanded && (
@@ -391,13 +455,13 @@ export default function Home() {
 
 
           </div>
-        </div>
+        </motion.div>
 
 
 
 
         {/* Spotify Clone*/}
-        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <motion.div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={spotify}
             // width={667}
@@ -443,7 +507,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium md:text-xl '>View Repository</h1>
+              <a href='https://github.com/rohan9024/spotify-clone' className='font-medium md:text-xl '>View Repository</a>
             </div>
             {/* {
               isExpanded && (
@@ -457,11 +521,11 @@ export default function Home() {
 
 
           </div>
-        </div>
+        </motion.div>
 
 
         {/* Ettara */}
-        <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        <motion.div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px]'>
           <Image
             src={mockup}
             // width={667}
@@ -500,7 +564,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium md:text-xl '>View Repository</h1>
+              <a href="https://github.com/Darshan4114/djcsi_team_one" className='font-medium md:text-xl '>View Repository</a>
             </div>
             {/* {
               isExpanded && (
@@ -512,10 +576,18 @@ export default function Home() {
               )
             } */}
           </div>
-        </div>
+        </motion.div>
 
-    {/* Bus Tracking Application */}
-    <div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] hover:border-2 hover:border-blue-500 hover:ease-in-out '>
+        {/* Bus Tracking Application */}
+        <motion.div
+          initial={{ opacity: 0.6 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          whileInView={{ opacity: 1 }}
+          className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={bustrackingMockup}
             // width={667}
@@ -530,7 +602,7 @@ export default function Home() {
             <h1 className='font-medium md:text-lg text-blue-500'>APP DEVELOPMENT</h1>
             <h1 className='font-medium text-2xl md:text-4xl'>Bus Tracking Application </h1>
             <div className='flex justify-start space-x-2'>
-            <Image
+              <Image
                 src={firebase}
                 width={30}
                 height={30}
@@ -547,7 +619,7 @@ export default function Home() {
             </div>
 
             <div className='flex cursor-pointer '>
-              <h1 className='font-medium md:text-xl '>View Repository</h1>
+              <a href="https://github.com/rohan9024/bus-tracking-app" className='font-medium md:text-xl '>View Repository</a>
             </div>
             {/* {
               isExpanded && (
@@ -559,14 +631,66 @@ export default function Home() {
               )
             } */}
           </div>
+        </motion.div>
+      </div>
+
+
+      {/* <Footer /> */}
+      <div className=' my-20 '>
+        <div className='flex justify-center items-center '>
+          <h1 className={`${raleway.className} text-xl rounded-full border border-gray-600 px-6 py-2 `}>Browse achievements</h1>
         </div>
+      </div>
 
+      <div className='flex flex-col bg-blue-700 '>
 
+        <section className='flex flex-col md:mt-36 mt-14'>
+          <h1 className={`${manrope.className} md:text-6xl text-3xl font-bold text-white text-center my-2`}>Let's work together</h1>
+          <h1 className={`${raleway.className} md:text-2xl md:my-10 text-sm text-white mx-4 text-center my-2`}>If you have an idea or project you want to discuss, feel free to contact me.</h1>
+          {/* Mail */}
+          <section className='flex justify-center items-center my-4  '>
+            <button onClick={() => router.push('mailto:rohanwandre24@gmail.com')} className={`${manrope.className} md:text-2xl text-lg font-bold rounded-full bg-yellow-400 md:px-10 md:py-4 px-6 py-2 text-gray-800 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-yellow-500 duration-300 `}>Send me an Email</button>
+          </section>
+          {/* Links */}
+          <section className='flex space-x-10 items-center mt-20 justify-center'>
+            <Image
+              src={mail}
+              width={40}
+              height={40}
+              alt="mail icon"
+              onClick={() => router.push('mailto:rohanwandre24@gmail.com')}
+              className='object-contain transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer'
+            />
+            <a href="https://github.com/rohan9024">
+              <Image
+                src={github}
+                width={40}
+                height={40}
+                alt="github icon"
+                className='object-contain  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer'
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/rohan-wandre-3796641b1/">
+              <Image
+                src={linkedin}
+                width={40}
+                height={40}
+                alt="linkedin icon"
+                className='object-contain transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer'
+              />
+            </a>
+
+          </section>
+          <section className={`${manrope.className} md:text-xl text-sm my-2 md:my-6 text-center text-gray-800`}>
+            <h1>®2023 All rights reserved Rohan Wandre</h1>
+          </section>
+        </section>
 
 
       </div>
 
 
-    </div>
+
+    </div >
   )
 }
