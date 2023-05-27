@@ -73,7 +73,7 @@ export default function Home() {
       </div>
       <div className={`${manrope.className} hidden md:flex md:justify-evenly md:items-center md:font-medium md:w-64 `}>
         <a href="https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing" className='transition ease-in delay-150 hover:text-gray-300 text-gray-500 duration-300 cursor-pointer '>Resume</a>
-        <h1 className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>About me</h1>
+        <Link href="/about-me" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>About me</Link>
       </div>
     </motion.div>
 
@@ -461,7 +461,16 @@ export default function Home() {
 
 
         {/* Spotify Clone*/}
-        <motion.div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
+        <motion.div 
+        
+        initial={{ opacity: 0.6 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          whileInView={{ opacity: 1 }}
+        className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={spotify}
             // width={667}
@@ -525,7 +534,15 @@ export default function Home() {
 
 
         {/* Ettara */}
-        <motion.div className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px]'>
+        <motion.div
+        initial={{ opacity: 0.6 }}
+        whileHover={{
+          scale: 1.1,
+          transition: { duration: 1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+        whileInView={{ opacity: 1 }}
+        className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px]'>
           <Image
             src={mockup}
             // width={667}
@@ -637,9 +654,9 @@ export default function Home() {
 
       {/* <Footer /> */}
       <div className=' my-20 '>
-        <div className='flex justify-center items-center '>
-          <h1 className={`${raleway.className} text-xl rounded-full border border-gray-600 px-6 py-2 `}>Browse achievements</h1>
-        </div>
+        <Link href="/achievements" className='flex justify-center items-center ' >
+          <h1 className={`${raleway.className} text-xl rounded-full border border-gray-600 px-6 py-2 transition ease-in-out delay-150 hover:bg-gray-300 duration-300 cursor-pointer`}>Browse achievements</h1>
+        </Link>
       </div>
 
       <div className='flex flex-col bg-blue-700 '>
@@ -659,7 +676,7 @@ export default function Home() {
               height={40}
               alt="mail icon"
               onClick={() => router.push('mailto:rohanwandre24@gmail.com')}
-              className='object-contain transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer'
+              className='object-contain transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer shadow-2xl'
             />
             <a href="https://github.com/rohan9024">
               <Image
