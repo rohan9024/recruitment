@@ -147,7 +147,7 @@ export default function Home() {
               }
             }
           }}
-          style={{ pointerEvents: open ? "auto" : "none" }}
+          style={{ pointerEvents: menu ? "auto" : "none" }}
         >
           <motion.a href='https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing' variants={itemVariants} className='text-xl '>Resume</motion.a>
           <Link href='/about-me'>
@@ -785,7 +785,7 @@ export default function Home() {
 
               </section>
               <section className={`${manrope.className} md:text-xl text-sm my-2 md:my-6 text-center text-gray-800`}>
-                <h1>®2023 All rights reserved Rohan Wandre</h1>
+                <h1>Made with 💖 by Rohan Wandre</h1>
               </section>
             </section>
 
@@ -794,6 +794,6 @@ export default function Home() {
 
 
 
-        </div >
+        </div>
         )
 }

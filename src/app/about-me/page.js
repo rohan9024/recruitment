@@ -42,7 +42,7 @@ function page() {
       <div className='flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-center md:space-x-10 md:my-10'>
 
         <motion.div
-          initial={{ x: -300, opacity: 0 }}
+          initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1 }}
           className='md:w-1/2 flex justify-center items-center w-full'
@@ -58,8 +58,8 @@ function page() {
         </motion.div>
 
         <motion.div
-          initial={{ x: -300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1 }}
           className='md:w-1/2 space-y-4 w-full my-10 '
         >
