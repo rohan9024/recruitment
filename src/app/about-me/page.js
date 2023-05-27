@@ -36,35 +36,37 @@ function page() {
           />
         </Link>
 
-        <h1 className={`${raleway.className} text-3xl tracking-wide font-semibold md:text-3xl  text-center p-10 `} >About Me</h1>
+        <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl  text-center p-10 `} >About Me</h1>
       </div>
 
-      <div className='flex justify-evenly items-center space-x-10 my-10'>
-        <motion.div
-          initial={{ x: -300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 1 }}
-          className='w-1/2 space-y-4'
-        >
-       <h1 className={`${raleway.className} text-5xl tracking-wide font-bold md:text-3xl   `} >Hey everyone👋 I'm Rohan Wandre</h1>
-       <h1 className={`${raleway.className} text-3xl tracking-wide font-semibold md:text-xl     `} >Technical Head at IEEE SIES GST | React Native Developer | Full Stack Developer | Open Source</h1>
-        </motion.div>
+      <div className='flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-center md:space-x-10 md:my-10'>
 
         <motion.div
           initial={{ x: -300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: "easeOut", duration: 1 }}
-          className='w-1/2 flex justify-center items-center'
+          className='md:w-1/2 flex justify-center items-center w-full'
 
         >
           <Image
             src='/me.jpg'
-            width={500}
-            height={500}
-            alt="back icon"
-            className='w-[500px] h-[500px] object-cover '
+            width={1200}
+            height={1200}
+            alt="my image"
+            className='w-[500px] md:h-[500px] h-[350px] object-cover rounded-full'
           />
         </motion.div>
+
+        <motion.div
+          initial={{ x: -300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+          className='md:w-1/2 space-y-4 w-full my-10 '
+        >
+          <h1 className={`${raleway.className} text-xl tracking-wide font-bold md:text-3xl text-center    `} >Hey everyone👋 I'm Rohan Wandre</h1>
+          <h1 className={`${raleway.className} text-sm tracking-wide font-normal md:text-xl  text-center   `} >Technical Head at IEEE SIES GST | React Native Developer | Full Stack Developer | Open Source</h1>
+        </motion.div>
+
       </div>
     </div>
   )
