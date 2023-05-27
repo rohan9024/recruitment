@@ -36,7 +36,7 @@ function page() {
           />
         </Link>
 
-        <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl  text-center p-10 `} >About Me</h1>
+        <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl text-center p-10 `} >About Me</h1>
       </div>
 
       <div className='flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-center md:space-x-10 md:my-10'>
@@ -68,6 +68,9 @@ function page() {
         </motion.div>
 
       </div>
+
+
+  
     </div>
   )
 }

@@ -76,7 +76,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className=' flex md:justify-center justify-evenly items-center space-x-7 mt-10 md:p-10 md:ml-20 md:mr-20'>
+        className=' flex md:justify-center justify-evenly items-center space-x-12 mt-10 md:p-10 md:ml-20 md:mr-20'>
         <div className={`${raleway.className} text-xl md:text-3xl cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
           <h1 className='text-center'>ROHAN WANDRE</h1>
         </div>
@@ -116,9 +116,11 @@ export default function Home() {
               </motion.div>
             )
         }
-        <div className={`${manrope.className} hidden md:flex md:justify-evenly md:items-center md:font-medium md:w-64 `}>
+        <div className={`${manrope.className} hidden md:flex md:justify-evenly md:items-center md:font-medium md:w-92 space-x-12`}>
           <a href="https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing" className='transition ease-in delay-150 hover:text-gray-300 text-gray-500 duration-300 cursor-pointer '>Resume</a>
+          <Link href="/experience" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>Experience</Link>
           <Link href="/about-me" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>About me</Link>
+          <a href="tel:9137244728" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>Contact</a>
         </div>
       </motion.div>
       <motion.nav
@@ -150,10 +152,12 @@ export default function Home() {
           style={{ pointerEvents: menu ? "auto" : "none" }}
         >
           <motion.a href='https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing' variants={itemVariants} className='text-xl '>Resume</motion.a>
-          <Link href='/about-me'>
+          <Link href='/experience'>
+            <motion.li variants={itemVariants} className='text-xl mt-5'>Experience</motion.li>
+            </Link>
+            <Link href='/about-me'>
             <motion.li variants={itemVariants} className='text-xl mt-5'>About Me</motion.li>
             </Link>
-
             </motion.ul>
           </motion.nav>
           <motion.div
