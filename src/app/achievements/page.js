@@ -41,7 +41,6 @@ function page() {
         </div>
 
         <div class="flex flex-col space-y-14 justify-center items-center md:grid md:grid-rows-4 md:grid-flow-col md:gap-4 md:space-y-0 md:place-content-center">
-
           {
             achievements.map((achievement) => (
               <div class="flex flex-col justify-center items-center lg:w-[700px] lg:h-[700px] self-center">

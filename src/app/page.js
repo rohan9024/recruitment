@@ -96,14 +96,14 @@ export default function Home() {
 
         {/* Netflix clone */}
         <motion.div
-          initial={{ opacity: 0.6 }}
+          initial={{ opacity: 0 , y: -120 }}
           whileHover={{
             scale: 1.1,
             transition: { duration: 1 },
           }}
           whileTap={{ scale: 0.9 }}
-          whileInView={{ opacity: 1 }}
-
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
           className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[550px] '>
           <Image
             src={netflix}
@@ -176,13 +176,14 @@ export default function Home() {
 
         {/* News Fetcher */}
         <motion.div
-          initial={{ opacity: 0.6 }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 1 },
-          }}
-          whileTap={{ scale: 0.9 }}
-          whileInView={{ opacity: 1 }}
+           initial={{ opacity: 0 , y: -120 }}
+           whileHover={{
+             scale: 1.1,
+             transition: { duration: 1 },
+           }}
+           whileTap={{ scale: 0.9 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ ease: "easeOut", duration: 1 }}
           className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[550px] '>
           <Image
             src={newsfetcher}
@@ -247,13 +248,14 @@ export default function Home() {
 
         {/* Social Media Manager */}
         <motion.div
-          initial={{ opacity: 0.6 }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 1 },
-          }}
-          whileTap={{ scale: 0.9 }}
-          whileInView={{ opacity: 1 }}
+         initial={{ opacity: 0 , y: -120 }}
+         whileHover={{
+           scale: 1.1,
+           transition: { duration: 1 },
+         }}
+         whileTap={{ scale: 0.9 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ ease: "easeOut", duration: 1 }}
           className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={smm2}
@@ -317,13 +319,14 @@ export default function Home() {
         </motion.div>
 
         {/* Social Media Manager App*/}
-        <motion.div initial={{ opacity: 0.6 }}
+        <motion.div      initial={{ opacity: 0 , y: -120 }}
           whileHover={{
             scale: 1.1,
             transition: { duration: 1 },
           }}
           whileTap={{ scale: 0.9 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
           className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={smm}
@@ -388,13 +391,14 @@ export default function Home() {
 
         {/* Donation Box*/}
         <motion.div
-          initial={{ opacity: 0.6 }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 1 },
-          }}
-          whileTap={{ scale: 0.9 }}
-          whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0 , y: -120 }}
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 1 },
+              }}
+              whileTap={{ scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ ease: "easeOut", duration: 1 }}
           className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px]  '>
           <Image
             src={d3}
@@ -463,13 +467,14 @@ export default function Home() {
         {/* Spotify Clone*/}
         <motion.div 
         
-        initial={{ opacity: 0.6 }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 1 },
-          }}
-          whileTap={{ scale: 0.9 }}
-          whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0 , y: -120 }}
+        whileHover={{
+          scale: 1.1,
+          transition: { duration: 1 },
+        }}
+        whileTap={{ scale: 0.9 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 1 }}
         className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={spotify}
@@ -535,13 +540,14 @@ export default function Home() {
 
         {/* Ettara */}
         <motion.div
-        initial={{ opacity: 0.6 }}
-        whileHover={{
-          scale: 1.1,
-          transition: { duration: 1 },
-        }}
-        whileTap={{ scale: 0.9 }}
-        whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0 , y: -120 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
         className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px]'>
           <Image
             src={mockup}
@@ -597,13 +603,14 @@ export default function Home() {
 
         {/* Bus Tracking Application */}
         <motion.div
-          initial={{ opacity: 0.6 }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 1 },
-          }}
-          whileTap={{ scale: 0.9 }}
-          whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 , y: -120 }}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 1 },
+            }}
+            whileTap={{ scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
           className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[580px] '>
           <Image
             src={bustrackingMockup}
