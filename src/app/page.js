@@ -159,7 +159,7 @@ export default function Home() {
           <Link href='/about-me'>
             <motion.li variants={itemVariants} className='text-xl'>About Me</motion.li>
           </Link>
-          <motion.a href='tel:919137244728' variants={itemVariants} className='text-xl'>Contact</motion.a>
+          <motion.a href='tel:9137244728' variants={itemVariants} className='text-xl'>Contact</motion.a>
 
         </motion.ul>
       </motion.nav>
