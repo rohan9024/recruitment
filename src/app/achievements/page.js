@@ -1,9 +1,12 @@
+"use client"
+
 import { Inter, Manrope, Raleway } from 'next/font/google';
 import React from 'react'
 
 import achievements from "../../../achievement.json"
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from "framer-motion"
 
 const raleway = Raleway({
   weight: ['400', '500', '600', '700', '800'],
@@ -24,7 +27,7 @@ function page() {
     <div className='flex justify-center items-center '>
       <div>
         {/* Back button */}
-        <div className='flex justify-center items-center'>
+        <div className='hidden md:flex justify-center items-center'>
 
           <Link
             href="/"
@@ -37,13 +40,34 @@ function page() {
             />
           </Link>
 
-          <h1 className={`${raleway.className} text-3xl tracking-wide font-semibold md:text-3xl  text-center  p-10 `} >Achievements</h1>
+          <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl text-center p-10 `} >Achievements</h1>
+        </div>
+
+        <div className='md:hidden flex justify-center items-center'>
+
+          <Link
+            href="/"
+            className='object-contain rounded-full cursor-pointer p-2 transition hover:bg-gray-300 hover:duration-150'>
+            <Image
+              src='/back.png'
+              width={20}
+              height={20}
+              alt="back icon"
+            />
+          </Link>
+
+          <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl text-center p-10 `} >Achievements</h1>
         </div>
 
         <div class="flex flex-col space-y-14 justify-center items-center md:grid md:grid-rows-4 md:grid-flow-col md:gap-4 md:space-y-0 md:place-content-center">
           {
             achievements.map((achievement) => (
-              <div class="flex flex-col justify-center items-center lg:w-[700px] lg:h-[700px] self-center">
+              <motion.div
+                initial={{ opacity: 0, y: -120 }}
+                whileTap={{ scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ ease: "easeOut", duration: 1 }}
+                class="flex flex-col justify-center items-center lg:w-[700px] lg:h-[700px] self-center">
                 <Image
                   src={achievement.banner}
                   width={400}
@@ -59,7 +83,7 @@ function page() {
                   )
                 }
 
-              </div>
+              </motion.div>
             ))
           }
 

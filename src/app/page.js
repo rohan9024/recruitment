@@ -119,6 +119,7 @@ export default function Home() {
         <div className={`${manrope.className} hidden md:flex md:justify-evenly md:items-center md:font-medium md:w-92 space-x-12`}>
           <a href="https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing" className='transition ease-in delay-150 hover:text-gray-300 text-gray-500 duration-300 cursor-pointer '>Resume</a>
           <Link href="/experience" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>Experience</Link>
+          <Link href="/achievements" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>Achievements</Link>
           <Link href="/about-me" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>About me</Link>
           <a href="tel:9137244728" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>Contact</a>
         </div>
@@ -150,16 +151,19 @@ export default function Home() {
             }
           }}
           style={{ pointerEvents: menu ? "auto" : "none" }}
-          className='flex flex-col justify-center items-center my-6 space-y-12'
+          className='flex flex-col justify-center items-center my-10 space-y-12'
         >
           <motion.a href='https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing' variants={itemVariants} className='text-xl '>Resume</motion.a>
           <Link href='/experience'>
-            <motion.li variants={itemVariants} className='text-xl'>Experience</motion.li>
+            <motion.li variants={itemVariants} className='text-xl p-2'>Experience</motion.li>
+          </Link>
+          <Link href='/achievements'>
+            <motion.li variants={itemVariants} className='text-xl p-2'>Achievements</motion.li>
           </Link>
           <Link href='/about-me'>
-            <motion.li variants={itemVariants} className='text-xl'>About Me</motion.li>
+            <motion.li variants={itemVariants} className='text-xl p-2'>About Me</motion.li>
           </Link>
-          <motion.a href='tel:9137244728' variants={itemVariants} className='text-xl'>Contact</motion.a>
+          <motion.a href='tel:9137244728' variants={itemVariants} className='text-xl p-2'>Contact</motion.a>
 
         </motion.ul>
       </motion.nav>
