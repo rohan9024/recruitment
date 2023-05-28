@@ -126,7 +126,7 @@ export default function Home() {
       <motion.nav
         initial={false}
         animate={menu ? "open" : "closed"}
-        className={menu ? "flex flex-col justify-center items-center my-6 h-full" : "hidden"}
+        className={menu ? "flex justify-center items-center" : "hidden"}
       >
         <motion.ul
           variants={{
@@ -150,14 +150,17 @@ export default function Home() {
             }
           }}
           style={{ pointerEvents: menu ? "auto" : "none" }}
+          className='flex flex-col justify-center items-center my-6 space-y-12'
         >
           <motion.a href='https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing' variants={itemVariants} className='text-xl '>Resume</motion.a>
           <Link href='/experience'>
-            <motion.li variants={itemVariants} className='text-xl mt-5'>Experience</motion.li>
+            <motion.li variants={itemVariants} className='text-xl'>Experience</motion.li>
           </Link>
           <Link href='/about-me'>
-            <motion.li variants={itemVariants} className='text-xl mt-5'>About Me</motion.li>
+            <motion.li variants={itemVariants} className='text-xl'>About Me</motion.li>
           </Link>
+          <motion.a href='tel:919137244728' variants={itemVariants} className='text-xl'>Contact</motion.a>
+
         </motion.ul>
       </motion.nav>
       <motion.div
