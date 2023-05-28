@@ -23,7 +23,7 @@ const manrope = Manrope({
 function page() {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <div className='flex justify-center items-center'>
+      <div className='hidden md:flex justify-center items-center'>
 
         <Link
           href="/"
@@ -32,6 +32,22 @@ function page() {
             src='/back.png'
             width={25}
             height={25}
+            alt="back icon"
+          />
+        </Link>
+
+        <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl text-center p-10 `} >About Me</h1>
+      </div>
+
+      <div className='md:hidden flex justify-center items-center'>
+
+        <Link
+          href="/"
+          className='object-contain rounded-full cursor-pointer p-2 transition hover:bg-gray-300 hover:duration-150'>
+          <Image
+            src='/back.png'
+            width={20}
+            height={20}
             alt="back icon"
           />
         </Link>
@@ -70,7 +86,7 @@ function page() {
       </div>
 
 
-  
+
     </div>
   )
 }
