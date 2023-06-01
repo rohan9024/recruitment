@@ -522,7 +522,7 @@ export default function Home() {
         </Link>
 
         {/* Ettara */}
-        <a href="https://github.com/Darshan4114/djcsi_team_one">
+        <Link href="/codeshastra">
           <motion.div
             initial={{ opacity: 0, y: -120 }}
             whileHover={{
@@ -568,7 +568,7 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </a>
+        </Link>
 
         {/* Bus Tracking Application */}
         <a href="https://github.com/rohan9024/bus-tracking-app">
@@ -608,7 +608,6 @@ export default function Home() {
                   className='object-contain rounded-full'
                 />
               </div>
-
             </div>
           </motion.div>
         </a>

@@ -280,10 +280,10 @@ function page() {
 
 
       {/* Browse other projects */}
-      <div className='flex justify-between items-center mx-5 mt-10 md:mr-5 lg:mx-10 xl:mx-96 md:mt-16'>
+      <div className='flex justify-between items-center mx-5 mt-10 md:mr-5 lg:mx-10 xl:mx-72 md:mt-16 lg:space-x-6'>
 
         <Link
-          href="/spotify-clone"
+          href="/codeshastra"
           className='flex flex-col md:flex-row justify-center items-center p-2'>
           <div
             className='object-contain rounded-full cursor-pointer p-4 transition hover:bg-gray-300 hover:duration-150'>
@@ -295,15 +295,14 @@ function page() {
             />
           </div>
 
-          <h1 className={`${raleway.className} text-md font-bold md:text-3xl`} >Spotify Clone</h1>
+          <h1 className={`${raleway.className} text-md font-bold md:text-3xl`} >Codeshastra Hackathon</h1>
         </Link>
 
         <Link
-          href="/hackniche"
-          className='hidden md:flex flex-col md:flex-row justify-center items-center p-2'>
-          <h1 className={`${raleway.className} text-md font-bold md:text-3xl  `} >Hackniche Hackathon</h1>
-          <div
-            className='object-contain rounded-full cursor-pointer p-4 transition hover:bg-gray-300 hover:duration-150'>
+          href="/err404"
+          className='hidden md:flex  flex-col md:flex-row justify-center items-center p-2'>
+          <h1 className={`${raleway.className} text-md font-bold md:text-3xl  `} >Error404 Hackathon</h1>
+          <div className='object-contain rounded-full cursor-pointer lg:p-1 p-4 transition hover:bg-gray-300 hover:duration-150'>
             <Image
               src='/right.png'
               width={25}
@@ -313,7 +312,7 @@ function page() {
           </div>
         </Link>
         <Link
-          href="/hackniche"
+          href="/err404"
           className='md:hidden flex flex-col md:flex-row justify-center items-center p-2'>
           <div
             className='object-contain rounded-full cursor-pointer p-4 transition hover:bg-gray-300 hover:duration-150'>
@@ -324,8 +323,7 @@ function page() {
               alt="right icon"
             />
           </div>
-
-          <h1 className={`${raleway.className} text-md font-bold md:text-3xl `} >Hackniche Hackathon</h1>
+          <h1 className={`${raleway.className} text-md font-bold md:text-3xl `} >Error404 Hackathon</h1>
         </Link>
       </div>
 
