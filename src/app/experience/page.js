@@ -55,7 +55,7 @@ function page() {
                 <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl text-center p-10 `} >Experience</h1>
             </div>
             {/* TCE */}
-            <div className='flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-center md:space-x-10 md:my-10 my-4 '>
+            <div className='flex flex-col justify-center items-center md:flex-row md:space-x-10 md:my-10 md:mx-10 my-4 md:flex md:justify-center md:items-center'>
 
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
@@ -86,9 +86,9 @@ function page() {
                     transition={{ ease: "easeOut", duration: 1 }}
                     className='md:w-2/3 md:space-y-10 space-y-7 w-full my-10 '
                 >
-                    <h1 className={`${manrope.className} text-xl tracking-wide font-bold md:text-3xl text-center`} >Chrome Extension Developer</h1>
+                    <h1 className={`${manrope.className} text-xl tracking-wide font-bold md:text-3xl lg:text-5xl md:text-left text-center`} >Chrome Extension Developer</h1>
 
-                    <div className={`${manrope.className} text-sm tracking-wide  font-normal md:text-xl text-left md:w-[900px] w-[350px] md:ml-28 space-y-4 `}>
+                    <div className={`${manrope.className} text-sm tracking-wide  font-normal md:text-lg md:w-full  lg:text-xl text-left lg:w-[900px] w-[350px] space-y-4 `}>
                         <h1>• Built chrome extension for renowned instagram influencers, celebrities.</h1>
                         <h1>• Worked on DOM manipulation and built logic, responsiveness, mobile view.</h1>
                         <h1>• Modified HTML source code & injecting custom JavaScript</h1>
@@ -97,17 +97,18 @@ function page() {
                     </div>
                     <div className='flex justify-evenly items-center'>
                         <a href="https://drive.google.com/file/d/1J1uzk0AXaJcjDKkAmMMNYH6lyQQYiv1y/view?usp=sharing" className={`${manrope.className} flex justify-center items-center font-bold `} >
-                            <h1 className='text-center md:text-2xl text-sm bg-blue-600 px-3 py-3 md:w-72 text-white rounded-lg shadow-lg cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-700 duration-300'>View Certification</h1>
+                            <h1 className='text-center md:text-lg lg:text-2xl text-sm bg-blue-600 px-3 py-3 md:w-56 lg:w-72 text-white rounded-lg shadow-lg cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-700 duration-300'>View Certification</h1>
                         </a>
-                        <a href="https://drive.google.com/file/d/1iVeRuvKFFJPYrAWXBzWr7glqHekVFP_E/view?usp=sharing" className={`${manrope.className} flex justify-center items-center font-normal`} >
-                            <h1 className='text-center md:text-2xl text-sm border border-gray-400 px-3 py-3 md:w-72 text-black rounded-lg shadow-lg cursor-pointer  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-300'>Implementation</h1>
-                        </a>
+                        <Link href="/chrome-extension-development" className={`${manrope.className} flex justify-center items-center font-normal`} >
+                            <h1 className='text-center md:text-lg lg:text-2xl text-sm border border-gray-400 px-3 py-3 md:w-44 lg:w-72 text-black rounded-lg shadow-lg cursor-pointer  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-300'>Implementation</h1>
+                        </Link>
                     </div>
 
                 </motion.div>
 
             </div>
-            <div className='flex flex-col justify-center items-center md:flex-row md:justify-evenly md:items-center md:space-x-10 md:my-10 my-4 '>
+            {/* tce full stack */}
+            <div className='md:ml-10 md:mr-10 flex flex-col justify-center items-center md:flex-row md:justify-center lg:justify-center md:items-center md:space-x-10 md:my-10 my-4 '>
 
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
@@ -131,9 +132,9 @@ function page() {
                     transition={{ ease: "easeOut", duration: 1 }}
                     className='md:w-2/3 md:space-y-10 space-y-7 w-full my-10 '
                 >
-                    <h1 className={`${manrope.className} text-xl tracking-wide font-bold md:text-3xl text-center`} >Full Stack Developer</h1>
+                    <h1 className={`${manrope.className} text-xl tracking-wide font-bold md:text-3xl  lg:text-5xl  text-center md:text-left`} >Full Stack Developer</h1>
 
-                    <div className={`${manrope.className} text-sm tracking-wide  font-normal md:text-xl text-left md:w-[900px] w-[350px] md:ml-28 space-y-4 `}>
+                    <div className={`${manrope.className} text-sm tracking-wide  font-normal md:w-full md:text-lg lg:text-xl text-left lg:w-[900px] w-[350px] space-y-4 `}>
                         <h1>• Made a web/mobile app for celebrities managing their social media <br /> accounts and stored data on Firebase Firestore.</h1>
                         <h1>• Used Facebook's Graph API for fetching and authentication of Instagram users.</h1>
                         <h1>• Implemented Comments Monitoring System.</h1>
@@ -177,9 +178,9 @@ function page() {
                     transition={{ ease: "easeOut", duration: 1 }}
                     className='md:w-2/3 space-y-10 w-full my-10 '
                 >
-                    <h1 className={`${manrope.className} text-xl tracking-wide font-bold md:text-3xl text-center`} >Frontend Developer</h1>
+                    <h1 className={`${manrope.className} text-xl tracking-wide font-bold md:text-3xl text-center lg:text-left lg:text-5xl `} >Frontend Developer</h1>
 
-                    <div className={`${manrope.className} text-sm tracking-wide font-normal md:text-xl text-left md:w-[900px] md:ml-28 w-[350px] space-y-4 `}>
+                    <div className={`${manrope.className} text-sm tracking-wide font-normal md:text-xl text-left md:w-[900px] w-[350px] space-y-4 `}>
                         <h1>• Worked on development of Resource Management System.</h1>
                         <h1>• Developed frontend Modules and integrated backend.</h1>
                         <h1>• Managed the whole team and translated client requirements.</h1>
@@ -190,9 +191,9 @@ function page() {
                         <a href="https://drive.google.com/file/d/15NwaqkpFaybgmZaC3qMO_gW09-C5CW9P/view?usp=sharing" className={`${manrope.className} flex justify-center items-center font-bold`} >
                             <h1 className='text-center md:text-2xl text-sm  bg-blue-600 px-3 py-3 md:w-72 text-white rounded-lg shadow-lg cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-700 duration-300'>View Certification</h1>
                         </a>
-                        <a href="https://drive.google.com/file/d/1J1uzk0AXaJcjDKkAmMMNYH6lyQQYiv1y/view?usp=sharing" className={`${manrope.className} flex justify-center items-center font-normal`} >
+                        <Link href="/greyfeathers" className={`${manrope.className} flex justify-center items-center font-normal`} >
                             <h1 className='text-center md:text-2xl text-sm  border border-gray-400 px-3 py-3 md:w-72 text-black rounded-lg shadow-lg cursor-pointer  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-300'>Implementation</h1>
-                        </a>
+                        </Link>
                     </div>
                 </motion.div>
             </div>

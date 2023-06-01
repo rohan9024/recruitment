@@ -72,6 +72,8 @@ export default function Home() {
           <h1>About me</h1>
         </div>
       </div> */}
+
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
