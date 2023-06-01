@@ -16,11 +16,9 @@ import linkedin from "../../assets/linkedin.png";
 import github from "../../assets/github.png";
 import mail from "../../assets/mail.png";
 import newsfetcher from "../../assets/newsfetcher2.png";
-// import ettara from "../../assets/ettara.png";
 import mockup from "../../assets/mockup.png";
 import nextjs from "../../assets/nextjs.png";
 import aws from "../../assets/aws.png";
-import spotifyAPI from "../../assets/spotifyAPI.png";
 import fastapi from "../../assets/fastapi.png";
 import smm from "../../assets/smm.png";
 import ig from "../../assets/ig.png";
@@ -29,7 +27,6 @@ import smm2 from "../../assets/smm2.jpg";
 import d3 from "../../assets/d3.jpg";
 import bustrackingMockup from "../../assets/bustrackingMockup.png";
 import moviesdbapi from "../../assets/moviesdbapi.svg";
-// import react from "../../assets/react.png";
 import { easeOut, motion, useScroll } from "framer-motion"
 import { useState } from 'react';
 import Link from 'next/link';
@@ -63,15 +60,6 @@ export default function Home() {
 
   return (
     <div className='w-screen '>
-      {/* <div className='w-full flex justify-between items-center md:p-10 md:ml-20 md:mr-20'>
-        <div className={`${raleway.className} text-3xl`} >
-          <h1>ROHAN WANDRE</h1>
-        </div>
-        <div className={`${manrope.className} flex justify-evenly items-center font-medium w-64`}>
-          <h1>Resume</h1>
-          <h1>About me</h1>
-        </div>
-      </div> */}
 
 
       <motion.div
@@ -187,7 +175,7 @@ export default function Home() {
 
 
         {/* Netflix clone */}
-        <a href="https://github.com/rohan9024/netflix-clone" >
+        <Link href="/netflix-clone" >
           <motion.div
             initial={{ opacity: 0, y: -120 }}
             whileHover={{
@@ -249,11 +237,11 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </a>
+        </Link>
 
 
         {/* News Fetcher */}
-        <a href="https://github.com/Darshan2003/team-debuggers-djsce">
+        <Link href="/hackniche">
           <motion.div
             initial={{ opacity: 0, y: -120 }}
             whileHover={{
@@ -306,7 +294,7 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </a>
+        </Link>
 
         {/* Social Media Manager */}
         <Link href="/social-media-manager">
@@ -477,7 +465,7 @@ export default function Home() {
 
 
         {/* Spotify Clone*/}
-        <a href='https://github.com/rohan9024/spotify-clone'>
+        <Link href='/spotify-clone'>
           <motion.div
 
             initial={{ opacity: 0, y: -120 }}
@@ -515,7 +503,7 @@ export default function Home() {
                   className='object-contain rounded-full'
                 />
                 <Image
-                  src={spotifyAPI}
+                  src="/spotify.png"
                   width={30}
                   height={30}
                   alt="spotify API"
@@ -531,7 +519,7 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </a>
+        </Link>
 
         {/* Ettara */}
         <a href="https://github.com/Darshan4114/djcsi_team_one">

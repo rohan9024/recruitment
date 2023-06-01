@@ -89,7 +89,7 @@ function page() {
             </div>
 
             {/* Problem Statement */}
-            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-96'>
+            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Problem Statement</h1>
 
@@ -105,7 +105,7 @@ function page() {
 
 
             {/* project objectives */}
-            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-96'>
+            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Project Objectives</h1>
 
@@ -122,7 +122,7 @@ function page() {
             </div>
 
             {/* Role */}
-            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-96'>
+            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Role</h1>
 
@@ -136,7 +136,7 @@ function page() {
 
 
             {/* Project Challenges */}
-            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-96'>
+            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Project Challenges</h1>
 
@@ -151,7 +151,7 @@ function page() {
             </div>
 
             {/* Approach */}
-            <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-96'>
+            <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Approach</h1>
 
@@ -164,7 +164,7 @@ function page() {
             </div>
 
             {/* Implementation */}
-            <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-96'>
+            <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Implementation</h1>
 
@@ -220,7 +220,7 @@ function page() {
             </div>
 
             {/* Tech Stack */}
-            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-96 md:mt-32'>
+            <div className='flex flex-col ml-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96 md:mt-32'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Tech Stack</h1>
 
@@ -232,7 +232,7 @@ function page() {
             </div>
 
             {/* Browse other projects */}
-            <div className='flex justify-between items-center mx-5 mt-10 md:mr-5 lg:mx-96 md:mt-16'>
+            <div className='flex justify-between items-center mx-5 mt-10 md:mr-5 lg:mx-10 xl:mx-96 md:mt-16'>
 
                 <Link
                     href="/netflix-clone"
@@ -252,7 +252,23 @@ function page() {
 
                 <Link
                     href="/spotify-clone"
-                    className='flex flex-col md:flex-row justify-center items-center p-2'>
+                    className='hidden md:flex flex-col md:flex-row justify-center items-center p-2'>
+                    <h1 className={`${raleway.className} text-md font-bold md:text-3xl  `} >Spotify Clone</h1>
+
+                    <div
+                        className='object-contain rounded-full cursor-pointer p-4 transition hover:bg-gray-300 hover:duration-150'>
+                        <Image
+                            src='/right.png'
+                            width={25}
+                            height={25}
+                            alt="right icon"
+                        />
+                    </div>
+
+                </Link>
+                <Link
+                    href="/spotify-clone"
+                    className='md:hidden flex flex-col md:flex-row justify-center items-center p-2'>
                     <div
                         className='object-contain rounded-full cursor-pointer p-4 transition hover:bg-gray-300 hover:duration-150'>
                         <Image

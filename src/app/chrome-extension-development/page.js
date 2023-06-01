@@ -37,7 +37,7 @@ function page() {
                     />
                 </Link>
 
-                <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl text-center p-10 `} >Chrome Extension Development</h1>
+                <h1 className={`${raleway.className} text-2xl tracking-wide font-semibold md:text-3xl text-center p-10 `} >Project Details</h1>
             </div>
 
             <div className='md:hidden bg-white fixed top-0 w-full flex justify-center items-center p-5 space-x-3'>
@@ -90,7 +90,7 @@ function page() {
             </div>
 
             {/* Features */}
-            <div className='flex flex-col ml-5 mt-10 space-y-3 md:space-y-5  md:mx-96'>
+            <div className='flex flex-col ml-5 mt-10 space-y-3 md:space-y-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Features</h1>
 
@@ -108,7 +108,7 @@ function page() {
 
 
             {/* Project Challenges */}
-            <div className='flex flex-col ml-5 mt-10 space-y-3 md:space-y-5 md:mx-96'>
+            <div className='flex flex-col ml-5 mt-10 space-y-3 md:space-y-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Project Challenges</h1>
 
@@ -121,7 +121,7 @@ function page() {
             </div>
 
             {/* Implementation */}
-            <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:space-y-5 md:mx-96'>
+            <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:space-y-5 lg:mx-10 xl:mx-96'>
                 {/* title */}
                 <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Implementation</h1>
 
@@ -141,7 +141,7 @@ function page() {
 
 
             {/* Browse other projects */}
-            <div className='flex justify-between items-center mx-5 mt-10 md:mt-20 md:mx-96 pb-10'>
+            <div className='flex justify-between items-center mx-5 mt-10 md:mt-20 lg:mx-10 xl:mx-96 pb-10'>
 
                 <Link
                     href="/netflix-clone"
