@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react'
 import { Inter, Manrope, Raleway } from 'next/font/google';
 import { motion } from "framer-motion"
 import spotify from "../../../assets/spotify.png"
+import newsfetcher from "../../../assets/newsfetcher.png"
+import newsfetcher2 from "../../../assets/newsfetcher2.png"
 
 
 const raleway = Raleway({
@@ -67,7 +69,6 @@ function page() {
           transition={{ ease: "easeOut", duration: 1 }}
           className='md:w-[400px] flex justify-center items-center w-full '
         >
-
           <Image
             src='/news.gif'
             width={1200}
@@ -75,7 +76,6 @@ function page() {
             alt="news gif"
             className='w-[150px] md:w-[300px] md:h-[500px] h-[150px] object-cover md:object-contain'
           />
-
         </motion.div>
 
         <div className='flex flex-col justify-center md:justify-normal md:items-start items-center space-y-2 md:space-y-5'>
@@ -93,24 +93,11 @@ function page() {
 
         {/* Description */}
         <div className='space-y-3'>
-          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>Develop a Blockchain-based Loyalty and Wallet program to increase
-            repeat user purchases for a cafe or restaurant.</h1>
-        </div>
-      </div>
-
-      {/* Description */}
-      <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
-        {/* title */}
-        <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Description</h1>
-
-        {/* Description */}
-        <div className='space-y-3'>
-          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>A stand-alone coffee shop based out of Juhu has a large number of their
-            audience between the age bracket of 15-35 (Refer to the brand deck for
-            details of audience and design elements, brank deck: Link) and wants to
-            do 2 key things, increase revenue through repeat purchases and reduce
-            costs through better planning of resources and managing production
-            requirements internally.</h1>
+          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>Create an automated server that fetches News every
+            day. (You can use any of the free apis like newsdata).
+            The news is fetched and stored on the server. Create
+            a UI (Can be a basic app, web, or any other basic UI)
+            that fetches these news stored on the server.</h1>
         </div>
       </div>
 
@@ -131,10 +118,12 @@ function page() {
 
         {/* Description */}
         <div className='space-y-3'>
-          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>•	Blockchain-based Loyalty and Wallet program (NFT incorporation if possible) to increase repeat user purchases <br />
-            •	Dashboard to upload new loyalty incentives and schemes, also to provide exclusive access to events by the coffee shop after the user has spent “x” amount in a particular time period (a week, a month or a quarter) <br />
-            •	Create a user leaderboard based on beverage/category and try to gamify the coffee ordering process (menu provided in the brand deck) <br />
-            •	Add push notifications for extremely important messages that need to be given to all users <br />
+          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>
+            •	News to be fetched, stored, and served only on the Server. <br />
+            •	You should use cloud services like Google Cloud, AWS, or similar to host the server you created. <br />
+            •	Personalized News can be stored. <br />
+            •	On UI you can make users select genres and based on that you can recommend personalized news. <br />
+            •	You can use features like FCM or AWS SES to notify users. <br />
           </h1>
         </div>
       </div>
@@ -146,12 +135,11 @@ function page() {
         {/* Description */}
         <div className='space-y-3'>
           <h1 className={`${manrope.className} text-sm md:tracking-wide font-normal md:text-lg text-gray-600 `}>
-            •	Blockchain Integration: Integrate Ganache blockchain to store and manage customer points data securely. <br />
-            •	Customer Registration: Allow customers to create accounts and link them to their blockchain wallet addresses. <br />
-            •	Points Accumulation: Implement a system to track and accumulate points for each customer based on their coffee purchases. <br />
-            •	Point Redemption: Provide a feature for customers to redeem their accumulated points for rewards or discounts on future coffee orders. <br />
-            •	Rewards Catalog: Create a catalog of available rewards that customers can choose from when redeeming their points. <br />
-            •	Points Balance Display: Show customers their current points balance in the app, allowing them to track their progress. <br />
+            <span className='font-bold'>• Advanced Search Capability:</span>  Easily find the news you need with our robust search functionality. Our intelligent search algorithms quickly scan through the vast collection of news articles, ensuring you discover the most relevant information. <br />
+            <span className='font-bold'>•	Topic Segregation:</span> Stay updated on your preferred subjects. Our system intelligently categorizes news articles into various topics, allowing you to effortlessly navigate through specific areas of interest and explore related content. <br />
+            <span className='font-bold'>•	Seamless AWS Integration:</span> We leveraged the power of AWS services to enhance our platform. By utilizing AWS S3 storage, we ensure reliable and scalable storage for our vast collection of news data. AWS Lambda functions enable us to process data efficiently, delivering seamless performance and user experience. <br />
+            <span className='font-bold'>•	Automated Data Fetching:</span> To keep our news database up to date, we implemented automated cron jobs. These jobs fetch news from trusted sources on a daily basis and store the data in a structured JSON format. This ensures that our users have access to the latest news articles at all times. <br />
+            <span className='font-bold'>•	Served with Speed:</span> Our platform leverages the efficient retrieval capabilities of AWS S3 to deliver news articles to users swiftly. By storing the data in S3 and serving it directly to users, we eliminate unnecessary delays, providing a seamless and responsive news browsing experience. <br />
           </h1>
         </div>
       </div>
@@ -190,33 +178,19 @@ function page() {
         <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Implementation</h1>
 
         {/* Description */}
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 '>
+        <div className='flex flex-col '>
           <Image
-            src="/ettarra1.webp"
-            width={200}
-            height={200}
-            alt="Ettarra Cafe Image"
+            src={newsfetcher}
+            width={800}
+            height={600}
+            alt="Newsfetcher Image"
             className='object-contain  '
           />
           <Image
-            src="/ettarra2.webp"
-            width={200}
-            height={200}
-            alt="Ettarra Cafe Image"
-            className='object-contain  '
-          />
-          <Image
-            src="/ettarra3.webp"
-            width={200}
-            height={200}
-            alt="Ettarra Cafe Image"
-            className='object-contain  '
-          />
-          <Image
-            src="/ettarra4.webp"
-            width={200}
-            height={200}
-            alt="Ettarra Cafe Image"
+            src={newsfetcher2}
+            width={800}
+            height={600}
+            alt="Newsfetcher Image"
             className='object-contain  '
           />
         </div>
@@ -242,45 +216,38 @@ function page() {
 
 
       {/* Glimpses of the Hackathon */}
-   
+
       <div className='flex flex-col  ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
         {/* title */}
         <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Glimpses of the Hackathon</h1>
         <Image
-          src="/codeshastra-logo.png"
+          src="/hackniche-logo.webp"
           width={700}
           height={500}
-          alt="Codeshastra highlights"
-          className='object-contain mx-auto '
+          alt="Hackniche highlights"
+          className='object-contain mx-auto'
         />
         {/* Description */}
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 '>
+        <div className='flex flex-col space-y-4 md:flex-row md:justify-evenly md:items-center md:space-x-4'>
           <Image
-            src="/codeshastra-1.jpg"
-            width={200}
-            height={200}
-            alt="Codeshastra highlights"
+            src="/hackniche-1.jpeg"
+            width={300}
+            height={400}
+            alt="Hackniche highlights"
             className='object-contain  '
           />
           <Image
-            src="/codeshastra-2.jpg"
-            width={200}
-            height={200}
-            alt="Codeshastra highlights"
+            src="/hackniche-2.jpeg"
+            width={300}
+            height={400}
+            alt="Hackniche highlights"
             className='object-contain  '
           />
           <Image
-            src="/codeshastra-3.jpg"
-            width={200}
-            height={200}
-            alt="Codeshastra highlights"
-            className='object-contain  '
-          />
-          <Image
-            src="/codeshastra-4.jpg"
-            width={200}
-            height={200}
-            alt="Codeshastra highlights"
+            src="/hackniche-3.jpg"
+            width={300}
+            height={400}
+            alt="Hackniche highlights"
             className='object-contain  '
           />
         </div>
@@ -293,21 +260,23 @@ function page() {
 
         {/* Description */}
         <div className='space-y-3 '>
-          <a href="https://github.com/Darshan4114/djcsi_team_one" className={`${manrope.className} text-sm  font-normal md:text-lg text-blue-600 underline`}>https://github.com/Darshan4114/djcsi_team_one</a>
+          <a href="https://github.com/Darshan2003/team-debuggers-djsce" className={`${manrope.className} text-sm  font-normal md:text-lg text-blue-600 underline`}>https://github.com/Darshan2003/team-debuggers-djsce</a>
         </div>
       </div>
 
 
-      {/* Devfolio Link */}
+      {/* Deployment Link */}
       <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96 md:mt-10'>
         {/* title */}
-        <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Devfolio Link</h1>
+        <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>Deployment Link</h1>
 
         {/* Description */}
         <div className='space-y-3'>
-          <a href="https://devfolio.co/projects/attarra-3463" className={`${manrope.className} text-sm font-normal md:text-lg text-blue-600 underline`}>https://devfolio.co/projects/attarra-3463</a>
+          <a href="https://hackathon-2-0.vercel.app/" className={`${manrope.className} text-sm font-normal md:text-lg text-blue-600 underline`}>https://hackathon-2-0.vercel.app/</a>
         </div>
       </div>
+
+
 
 
       {/* Browse other projects */}
@@ -356,7 +325,7 @@ function page() {
             />
           </div>
 
-          <h1 className={`${raleway.className} text-md font-bold md:text-3xl  `} >Hackniche Hackathon</h1>
+          <h1 className={`${raleway.className} text-md font-bold md:text-3xl `} >Hackniche Hackathon</h1>
         </Link>
       </div>
 

@@ -353,7 +353,7 @@ export default function Home() {
         </Link>
 
         {/* Social Media Manager App*/}
-        <Link href="/social-media-manager-app">
+        <Link href="/social-media-manager">
           <motion.div initial={{ opacity: 0, y: -120 }}
             whileHover={{
               scale: 1.1,
