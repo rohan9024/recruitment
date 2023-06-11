@@ -107,7 +107,7 @@ export default function Home() {
             )
         }
         <div className={`${manrope.className} hidden md:flex md:justify-evenly md:items-center md:font-medium md:w-92 space-x-12`}>
-          <a href="https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing" className='transition ease-in delay-150 hover:text-gray-300 text-gray-500 duration-300 cursor-pointer '>Resume</a>
+          <a href="https://drive.google.com/file/d/1-aYazGEtQyGtNaLtDeo3a1TWTvDnlPqL/view?usp=sharing" className='transition ease-in delay-150 hover:text-gray-300 text-gray-500 duration-300 cursor-pointer '>Resume</a>
           <Link href="/experience" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>Experience</Link>
           <Link href="/achievements" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>Achievements</Link>
           <Link href="/about-me" className=' transition ease-in delay-150 hover:text-gray-300  text-gray-500 duration-300 cursor-pointer'>About me</Link>
@@ -143,7 +143,7 @@ export default function Home() {
           style={{ pointerEvents: menu ? "auto" : "none" }}
           className='flex flex-col justify-center items-center my-10 space-y-12'
         >
-          <motion.a href='https://drive.google.com/file/d/1OWOfKZ8IqDJxffsywv-cxXMT_2uPmtxB/view?usp=sharing' variants={itemVariants} className='text-xl '>Resume</motion.a>
+          <motion.a href='https://drive.google.com/file/d/1-aYazGEtQyGtNaLtDeo3a1TWTvDnlPqL/view?usp=sharing' variants={itemVariants} className='text-xl '>Resume</motion.a>
           <Link href='/experience'>
             <motion.li variants={itemVariants} className='text-xl p-2'>Experience</motion.li>
           </Link>
@@ -178,11 +178,7 @@ export default function Home() {
         <Link href="/netflix-clone" >
           <motion.div
             initial={{ opacity: 0, y: -120 }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ scale: 0.9 }}
+         
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
 
@@ -244,11 +240,7 @@ export default function Home() {
         <Link href="/hackniche">
           <motion.div
             initial={{ opacity: 0, y: -120 }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ scale: 0.9 }}
+         
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
             className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[350px] '>
@@ -300,11 +292,7 @@ export default function Home() {
         <Link href="/social-media-manager">
           <motion.div
             initial={{ opacity: 0, y: -120 }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ scale: 0.9 }}
+         
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
             className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[350px] '>
@@ -355,11 +343,7 @@ export default function Home() {
         {/* Social Media Manager App*/}
         <Link href="/social-media-manager">
           <motion.div initial={{ opacity: 0, y: -120 }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ scale: 0.9 }}
+         
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
             className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[370px] '>
@@ -407,14 +391,10 @@ export default function Home() {
         </Link>
 
         {/* Donation Box*/}
-        <a href="https://github.com/rohan9024/donation-box" >
+        <Link href="/donation-box" >
           <motion.div
             initial={{ opacity: 0, y: -120 }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ scale: 0.9 }}
+         
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
             className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[370px] '>
@@ -460,7 +440,7 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </a>
+        </Link>
 
 
 
@@ -469,11 +449,7 @@ export default function Home() {
           <motion.div
 
             initial={{ opacity: 0, y: -120 }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ scale: 0.9 }}
+         
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
             className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[370px] '>
@@ -525,11 +501,7 @@ export default function Home() {
         <Link href="/codeshastra">
           <motion.div
             initial={{ opacity: 0, y: -120 }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ scale: 0.9 }}
+         
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
             className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[380px] '>
@@ -571,14 +543,9 @@ export default function Home() {
         </Link>
 
         {/* Bus Tracking Application */}
-        <a href="https://github.com/rohan9024/bus-tracking-app">
+        <Link href="/bus-tracking">
           <motion.div
             initial={{ opacity: 0, y: -120 }}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
             className='md:flex md:flex-row flex flex-col border border-gray-100 rounded-lg shadow-2xl md:w-[1140px] md:h-[489px] w-[300px] h-[370px] '>
@@ -610,7 +577,7 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </a>
+        </Link>
       </div>
 
       {/* <Footer /> */}

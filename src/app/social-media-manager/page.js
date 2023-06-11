@@ -27,7 +27,7 @@ function page() {
             <div className='hidden bg-white w-full md:flex fixed top-0 justify-center items-center'>
 
                 <Link
-                    href="/experience"
+                    href="/"
                     className='object-contain rounded-full cursor-pointer p-4 transition hover:bg-gray-300 hover:duration-150'>
                     <Image
                         src='/back.png'
@@ -43,7 +43,7 @@ function page() {
             <div className='md:hidden bg-white fixed top-0 w-full flex justify-center items-center p-5 space-x-3'>
 
                 <Link
-                    href="/experience"
+                    href="/"
                     className='object-contain rounded-full cursor-pointer p-2 transition hover:bg-gray-300 hover:duration-150'>
                     <Image
                         src='/back.png'

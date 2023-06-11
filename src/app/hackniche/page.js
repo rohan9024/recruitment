@@ -101,16 +101,7 @@ function page() {
         </div>
       </div>
 
-      {/* how we solved the problem */}
-      <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
-        {/* title */}
-        <h1 className={`${manrope.className} text-xl font-bold md:text-3xl `}>How we solved the problem?</h1>
 
-        {/* Description */}
-        <div className='space-y-3'>
-          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>We pay you for buying coffee. We provide coins for every purchase and using those coins the customer can redeem points, get access to exclusive offers, and much more. This is a blockchain-based application that the Attarra peer group uses in order to circulate the contracts.</h1>
-        </div>
-      </div>
       {/* features requested */}
       <div className='flex flex-col ml-5 mr-5 mt-10 space-y-3 md:mr-5 lg:mx-10 xl:mx-96'>
         {/* title */}
@@ -168,7 +159,7 @@ function page() {
 
         {/* Description */}
         <div className='space-y-5'>
-          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>We faced difficulty building a blockchain API to secure the app's storage.</h1>
+          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>We faced difficulty in setting up AWS Lambda functions</h1>
         </div>
       </div>
 
@@ -203,14 +194,12 @@ function page() {
 
         {/* Description */}
         <div className='space-y-3'>
-          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>Solidity,
+          <h1 className={`${manrope.className} text-sm  font-normal md:text-lg text-gray-600 `}>
             React,
-            Typescript,
-            Blockchain,
-            Ganache,
-            Node,
-            Truffle,
-            Next</h1>
+            Fast API,
+            AWS Lambda Functions,
+            AWS S3 Storage,
+            Tailwind CSS</h1>
         </div>
       </div>
 
