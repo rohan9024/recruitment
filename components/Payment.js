@@ -15,28 +15,28 @@ const manrope = Manrope({
 
 function Payment() {
     return (
-
         <div className='flex justify-center items-center mt-20 '>
-            <div className='flex flex-col justify-center items-center'>
-                <div className={`${raleway.className} space-y-6 mx-5 `}>
+            <div className='flex flex-col md:justify-center md:items-center'>
+                <div className={`${raleway.className} space-y-6  `}>
                     <h1 className='text-2xl md:text-6xl font-bold  text-center'>Choose your plan</h1>
-                    <h1 className='text-lg md:text-2xl font-medium text-center'>14 days unlimited free plan. No contract or credit card required.</h1>
+                    <h1 className='hidden md:flex text-lg md:text-2xl font-medium text-center'>14 days unlimited free plan. No contract or credit card required.</h1>
+                    <h1 className='md:hidden text-lg md:text-2xl font-medium text-center'>14 days unlimited free plan. <br /> No contract or credit card required.</h1>
                 </div>
 
-                <div className='flex justify-center items-center my-20 mx-32 space-x-12'>
+                <div className='flex md:flex-row flex-col justify-center items-center my-20 md:mx-32 md:space-x-12 space-y-12 md:space-y-0'>
 
                     {/* Free Plan */}
                     <div>
                         {/* Overlay on the image */}
                         <div className={`${manrope.className} z-10 absolute flex flex-col text-white  ml-8 mt-5`}>
-                            <h1 className=' text-4xl font-thin'>#1</h1>
+                            <h1 className='text-4xl font-thin'>#1</h1>
                             <h1 className='text-5xl font-semibold '>Entry</h1>
                         </div>
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.7 }}
-                            className='flex flex-col items-center max-w-[400px] min-w-[400px] h-[700px] border border-gray-300 bg-gray-200  shadow-lg rounded-lg'>
+                            className='flex flex-col items-center w-[350px] h-[560px]  md:max-w-[400px] md:min-w-[400px] md:h-[710px] border border-gray-300 bg-gray-200  shadow-lg rounded-lg'>
                             <div className=' mx-2 my-2'>
                                 <Image
                                     src="/cards-1.webp"
@@ -46,20 +46,20 @@ function Payment() {
                                     className='h-44 object-cover rounded-lg'
                                 />
                             </div>
-                            <div className={`${raleway.className}  my-2`}>
-                                <h1 className=' text-6xl font-bold text-center my-6 '>FREE <br /></h1>
-                                <section className='flex flex-col space-y-5 mx-10'>
-                                    <section className='flex text-lg font-normal space-x-4'>
+                            <div className={`${raleway.className} space-y-10`}>
+                                <h1 className='text-5xl md:text-6xl font-bold text-center md:my-10 my-5'>FREE <br /></h1>
+                                <section className='flex flex-col space-y-5 mx-10 text-md md:text-lg font-normal '>
+                                    <section className='flex space-x-4'>
                                         <Image
                                             src="/green-tick.png"
                                             width={30}
                                             height={30}
                                             alt="tick"
-                                            className='object-contain rounded-lg'
+                                            className=' object-contain rounded-lg'
                                         />
                                         <h1>Limited job postings per month</h1>
                                     </section>
-                                    <section className='flex text-lg font-normal space-x-4'>
+                                    <section className='flex space-x-4'>
                                         <Image
                                             src="/green-tick.png"
                                             width={30}
@@ -69,7 +69,7 @@ function Payment() {
                                         />
                                         <h1>Access to a restricted resume database</h1>
                                     </section>
-                                    <section className='flex text-lg font-normal space-x-4'>
+                                    <section className='flex space-x-4'>
                                         <Image
                                             src="/green-tick.png"
                                             width={30}
@@ -79,7 +79,7 @@ function Payment() {
                                         />
                                         <h1>Basic applicant tracking system functionality</h1>
                                     </section>
-                                    <section className='flex text-lg font-normal space-x-4'>
+                                    <section className='flex space-x-4'>
                                         <Image
                                             src="/green-tick.png"
                                             width={30}
@@ -105,7 +105,7 @@ function Payment() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.7 }}
-                            className='flex flex-col items-center max-w-[400px] min-w-[400px] h-[700px] border border-gray-300 bg-gray-200  shadow-lgtext-black rounded-lg'>
+                            className='flex flex-col items-center  md:max-w-[400px] md:min-w-[400px] md:h-[710px] border border-gray-300 bg-gray-200  shadow-lgtext-black rounded-lg'>
                             <div className=' mx-2 my-2'>
                                 <Image
                                     src="/cards-2.webp"
@@ -115,9 +115,9 @@ function Payment() {
                                     className='h-44 object-cover rounded-lg'
                                 />
                             </div>
-                            <div className={`${raleway.className}  my-2`}>
-                                <div className='flex justify-center items-center my-6 space-x-4'>
-                                    <h1 className={`${manrope.className} text-6xl font-bold `}>$29<br /></h1>
+                            <div className={`${raleway.className}  `}>
+                                <div className='flex justify-center items-center md:my-10 my-5 space-x-4'>
+                                    <h1 className={`${manrope.className} text-5xl md:text-6xl font-bold `}>$29<br /></h1>
                                     <h1 className='font-normal text-gray-200'>/mo<br /></h1>
                                 </div>
                                 <section className='flex flex-col space-y-5 mx-10'>
@@ -187,7 +187,7 @@ function Payment() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.7 }}
-                            className='flex flex-col items-center max-w-[400px] min-w-[400px] h-[700px] border border-gray-300 bg-gray-200  shadow-lgtext-black rounded-lg'>
+                            className='flex flex-col items-center  md:max-w-[400px] md:min-w-[400px] md:h-[710px] border border-gray-300 bg-gray-200  shadow-lgtext-black rounded-lg'>
                             <div className=' mx-2 my-2'>
                                 <Image
                                     src="/cards-3.webp"
@@ -197,9 +197,9 @@ function Payment() {
                                     className='h-44 object-cover rounded-lg'
                                 />
                             </div>
-                            <div className={`${raleway.className}  my-2`}>
-                                <div className='flex justify-center items-center my-6 space-x-4'>
-                                    <h1 className={`${manrope.className} text-6xl font-bold `}>$59<br /></h1>
+                            <div className={`${raleway.className}`}>
+                                <div className='flex justify-center items-center md:my-10 my-5 space-x-4'>
+                                    <h1 className={`${manrope.className} text-5xl md:text-6xl font-bold `}>$59<br /></h1>
                                     <h1 className='font-normal text-gray-200'>/mo<br /></h1>
                                 </div>
 
@@ -271,6 +271,7 @@ function Payment() {
                 </div>
             </div>
         </div>
+
 
     )
 }

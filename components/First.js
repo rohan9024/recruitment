@@ -14,7 +14,7 @@ function First() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className='md:flex-row flex-col flex justify-center md:justify-normal items-center space-y-4 md:space-y-0 md:space-x-12 md:mx-32 mx-10 mt-10 md:mt-20'>
+        className='md:flex-row flex-col flex justify-center md:justify-normal items-center space-y-4 md:space-x-12 md:space-y-12  md:mx-32 mx-10 mt-10 md:mt-20'>
         <div className='hidden md:flex md:w-1/2'>
             <Image
                 src="/sideimage4.jpg"
