@@ -21,7 +21,7 @@ function Fourth() {
                     className='flex flex-col items-center space-y-5'>
                     <div className=''>
                         <Image
-                            src="/sideimage-3.jpg"
+                            src="/fourth.gif"
                             width={1700}
                             height={1700}
                             alt="sideimage"
@@ -29,9 +29,33 @@ function Fourth() {
                         />
                     </div>
                     <div className={`${raleway.className}  space-y-5 my-6`}>
-                        <h1 className='text-2xl font-bold'>Save Time and Resources<br /></h1>
-                        <h1 className='text-md font-normal'>Reduce manual tasks and paperwork, allowing your hiring team to focus on strategic decision-making and building relationships with candidates.</h1>
+                        <h1 className='text-2xl font-bold'>Monetize Your Ideas<br /></h1>
+                        <h1 className='text-md font-normal'>Transform Your Projects into Profit - Sell Your Innovations Here</h1>
                     </div>
+                </motion.div>
+            </div>
+
+            {/* Hidden on mobile screens */}
+            <div className='hidden md:flex flex-col mt-20 mx-32'>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.7 }}
+                    className='flex items-center md:space-x-28 space-x-12 space-y-12 '>
+                    <div className={`${raleway.className} w-1/2  space-y-12`}>
+                        <h1 className=' text-6xl font-bold'>Monetize Your Ideas<br /></h1>
+                        <h1 className='text-2xl font-normal'>Transform Your Projects into Profit - Sell Your Innovations Here</h1>
+                    </div>
+                    <div className='w-1/2'>
+                        <Image
+                            src="/fourth.gif"
+                            width={1700}
+                            height={1700}
+                            alt="sideimage"
+                            className='object-contain'
+                        />
+                    </div>
+
                 </motion.div>
             </div>
         </>

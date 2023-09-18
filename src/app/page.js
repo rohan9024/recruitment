@@ -52,7 +52,7 @@ export default function Home() {
     return (
         <div className='w-screen '>
 
-            <section className='w-screen h-screen'>
+            <section className='md:w-screen  '>
 
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -116,12 +116,12 @@ export default function Home() {
                                 </motion.div>
                             )
                     }
-                    <div className={`${raleway.className} hidden md:flex md:justify-evenly md:items-center md:font-bold md:w-92 space-x-12`}>
-                        <a className='transition ease-in  hover:font-bold hover:scale-125 hover:text-black text-gray-700  cursor-pointer  p-2 '>Platform</a>
-                        <Link href="/" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Features</Link>
-                        <Link href="/" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Company</Link>
-                        <Link href="/" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Blogs</Link>
-                        <a className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  cursor-pointer p-2 '>Contact Us</a>
+                    <div className={`${raleway.className} hidden md:flex md:justify-evenly md:items-center  md:w-92 space-x-12`}>
+                        <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Certifications</Link>
+                        <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Live Projects</Link>
+                        <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Guidance</Link>
+                        <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Find Teammates</Link>
+                        <a className='transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  cursor-pointer p-2 '>Contact Us</a>
                     </div>
 
                     <div className={`${raleway.className} hidden md:flex cursor-pointer transition bg-black text-white font-bold rounded-lg px-5 py-2 ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
@@ -157,32 +157,26 @@ export default function Home() {
                         style={{ pointerEvents: menu ? "auto" : "none" }}
                         className='flex flex-col justify-center items-center my-10 space-y-12'
                     >
+                        <motion.a variants={itemVariants} className='text-xl '>Certifications</motion.a>
+                        <motion.a variants={itemVariants} className='text-xl '>Live Projects</motion.a>
+                        <motion.a variants={itemVariants} className='text-xl '>Guidance</motion.a>
                         <motion.a variants={itemVariants} className='text-xl '>Platform</motion.a>
-                        <Link href='/'>
-                            <motion.li variants={itemVariants} className='text-xl p-2'>Features</motion.li>
-                        </Link>
-                        <Link href='/'>
-                            <motion.li variants={itemVariants} className='text-xl p-2'>Company</motion.li>
-                        </Link>
-                        <Link href='/'>
-                            <motion.li variants={itemVariants} className='text-xl p-2'>Blogs</motion.li>
-                        </Link>
-                        <motion.a variants={itemVariants} className='text-xl p-2'>Contact Us</motion.a>
+
                         <motion.a variants={itemVariants} className='text-xl p-2'>Sign In</motion.a>
 
                     </motion.ul>
                 </motion.nav>
 
 
-                {/* First Section */}
-                <First />
-
             </section>
+            {/* First Section */}
+            <First />
+
 
             {/* Second Section */}
             <Second />
 
-          
+
             {/* Third Section */}
 
             <Third />
