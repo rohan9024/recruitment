@@ -27,18 +27,18 @@ function Footer() {
                 </div>
             </div>
             <div className='w-4/5 mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-10 text-center'>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>ENGLISH(INTL)</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Privacy Policy</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Terms & Conditions</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Newsletter</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Contact</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Stores</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Legal & Privacy</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Jobs</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Follow Us</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Instagram</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Twitter</h1>
-                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-2xl hover:scale-125 '>Cookies</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>ENGLISH(INTL)</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Privacy Policy</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Terms & Conditions</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Newsletter</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Contact</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Stores</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Legal & Privacy</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Jobs</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Follow Us</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Instagram</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Twitter</h1>
+                <h1 className='my-2 hover:cursor-pointer transition ease-in hover:font-bold hover:text-lg hover:scale-125 '>Cookies</h1>
             </div>
         </div>
     )

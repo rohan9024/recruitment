@@ -13,7 +13,7 @@ function Fourth() {
     return (
         <>
             {/* Hidden on large screens */}
-            <div className='md:hidden flex flex-col mx-10 mt-20'>
+            <div className='md:hidden flex flex-col mx-10 mt-20 my-44'>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -36,7 +36,7 @@ function Fourth() {
             </div>
 
             {/* Hidden on mobile screens */}
-            <div className='hidden md:flex flex-col mt-20 mx-32'>
+            <div className='hidden md:flex flex-col mt-20 mx-32 my-44'>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

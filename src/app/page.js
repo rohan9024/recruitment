@@ -15,6 +15,7 @@ import Testimonials from '../../components/Testimonials';
 import Services from '../../components/Services';
 import Payment from '../../components/Payment';
 import Footer from '../../components/Footer';
+import Waitlist from '../../components/Waitlist';
 
 
 const raleway = Raleway({
@@ -187,14 +188,15 @@ export default function Home() {
 
             {/* Testimonials Section */}
 
-            <Testimonials />
+            {/* <Testimonials /> */}
             {/* Services */}
 
             {/* <Services /> */}
             {/* Payments */}
-            <Payment />
+            {/* <Payment /> */}
 
             {/* <Footer /> */}
+            {/* <Waitlist /> */}
             <Footer />
 
 
