@@ -124,10 +124,12 @@ export default function Home() {
                         <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Find Teammates</Link>
                         <a className='transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  cursor-pointer p-2 '>Contact Us</a>
                     </div>
+                    <Link href="/register">
+                        <div className={`${raleway.className} hidden md:flex cursor-pointer transition bg-black text-white font-bold rounded-lg px-5 py-2 ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
+                            <h1>Sign In</h1>
+                        </div>
+                    </Link>
 
-                    <div className={`${raleway.className} hidden md:flex cursor-pointer transition bg-black text-white font-bold rounded-lg px-5 py-2 ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
-                        <h1>Sign In</h1>
-                    </div>
                 </motion.div>
                 <motion.nav
                     initial={false}
@@ -158,10 +160,10 @@ export default function Home() {
                         style={{ pointerEvents: menu ? "auto" : "none" }}
                         className='flex flex-col justify-center items-center my-10 space-y-12'
                     >
-                        <motion.a variants={itemVariants} className='text-xl '>Certifications</motion.a>
-                        <motion.a variants={itemVariants} className='text-xl '>Live Projects</motion.a>
-                        <motion.a variants={itemVariants} className='text-xl '>Guidance</motion.a>
-                        <motion.a variants={itemVariants} className='text-xl '>Platform</motion.a>
+                        <motion.a variants={itemVariants} className='text-xl' href="/development" >Certifications</motion.a>
+                        <motion.a variants={itemVariants} className='text-xl ' href="/development" >Live Projects</motion.a>
+                        <motion.a variants={itemVariants} className='text-xl ' href="/development" >Guidance</motion.a>
+                        <motion.a variants={itemVariants} className='text-xl ' href="/development" >Platform</motion.a>
 
                         <motion.a variants={itemVariants} className='text-xl p-2'>Sign In</motion.a>
 

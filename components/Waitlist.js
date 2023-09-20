@@ -1,6 +1,7 @@
 "use client"
 
 import { Inter, Manrope, Raleway } from 'next/font/google';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useRef, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
@@ -25,6 +26,8 @@ function WaitList() {
     const passwordRef = useRef(null);
 
     const [email, setEmail] = useState()
+    const [linkedin, setLinkedin] = useState()
+    const [github, setGithub] = useState()
     const [name, setName] = useState()
     const [city, setCity] = useState()
     const [collegeName, setCollegeName] = useState()
@@ -70,21 +73,43 @@ function WaitList() {
                 theme="light"
             />
             <div className=''>
+
+                <div className='flex justify-center items-center'>
+                    <Link
+                        href="/"
+                        className='object-contain rounded-full cursor-pointer p-4 transition hover:bg-gray-300 hover:duration-150'>
+                        <Image
+                            src='/back.png'
+                            width={25}
+                            height={25}
+                            alt="back icon"
+                        />
+                    </Link>
+                    <h1 className={`${raleway.className} tracking-wide font-semibold md:text-3xl text-center p-10 `} >Back to Home</h1>
+                </div>
                 <div className='flex flex-col justify-center items-center w-screen h-[640px] space-y-5'>
                     <img
                         className='object-contain w-28 h-28 cursor-pointer'
                         src="/logo-3.png"
                         alt="logo" />
-                    <h1 className={`${raleway.className} text-2xl font-bold`}>Register for Waitlist</h1>
+                    <h1 className={`${raleway.className} text-2xl font-bold`}>Register for our Waitlist</h1>
                     <form className='flex flex-col justify-center items-center space-y-5'>
-                        <input ref={email} type="email" placeholder="Email address" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-72' />
-                        <input ref={name} type="text" placeholder="Full Name" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-72' />
-                        <input ref={city} type="text" placeholder="City" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-72' />
-                        <input ref={collegeName} type="text" placeholder="College Name" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-72' />
-                        <div className='flex justify-center items-center w-72 bg-black text-white py-2'>
+                        <input ref={email} type="email" placeholder="Email address" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-96' />
+                        <input ref={name} type="text" placeholder="Full Name" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-96' />
+                        <input ref={city} type="text" placeholder="City" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-96' />
+                        <input ref={collegeName} type="text" placeholder="College Name" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-96' />
+                        <br />
+                        <hr className='bg-black w-96 h-[2px]' />
+
+
+                        <input ref={linkedin} type="text" placeholder="Enter your Linkedin URL(Optional)" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-96' />
+
+                        <input ref={github} type="text" placeholder="Enter your Github URL(Optional)" className='placeholder:text-gray-800 px-5 py-2  outline-none border border-gray-800 w-96' />
+
+                        <div className='flex justify-center items-center w-96 bg-black text-white py-2'>
                             <button type='submit' onClick={register}>Register</button>
                         </div>
-                    
+
                     </form>
                 </div>
             </div>
