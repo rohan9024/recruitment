@@ -16,6 +16,7 @@ import Services from '../../components/Services';
 import Payment from '../../components/Payment';
 import Footer from '../../components/Footer';
 import Waitlist from '../../components/Waitlist';
+import Timeline from '../../components/Timeline';
 
 
 const raleway = Raleway({
@@ -53,32 +54,32 @@ export default function Home() {
     return (
         <div className='w-screen '>
 
-            <section className='md:w-screen  '>
+            <section className='lg:w-screen  '>
 
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.7 }}
-                    className=' flex justify-between items-center  mt-10 mx-9 md:mx-0 md:ml-20 md:mr-20'>
+                    className=' flex justify-between items-center  mt-10 mx-9 lg:mx-0 lg:ml-20 lg:mr-20'>
                     {/* Hidden on mobile screens */}
-                    <div className={`${raleway.className}  hidden md:flex cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
+                    <div className={`${raleway.className}  hidden lg:flex cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
                         <Image
-                            src="/logo-3.png"
-                            width={200}
-                            height={200}
+                            src="/logo.jpg"
+                            width={90}
+                            height={90}
                             alt="logo"
-                            className='object-contain'
+                            className='object-contain rounded-full'
                         />
                     </div>
                     {/* Hidden on large screens  */}
 
-                    <div className={`${raleway.className} md:hidden flex  cursor-pointer `} >
+                    <div className={`${raleway.className} lg:hidden flex justify-center space-x-4 items-center  cursor-pointer `} >
                         <Image
-                            src="/logo-3.png"
-                            width={50}
-                            height={50}
+                            src="/logo.jpg"
+                            width={60}
+                            height={60}
                             alt="logo"
-                            className='h-32 w-32 object-cover'
+                            className=' object-contain rounded-full'
                         />
                     </div>
                     {
@@ -86,7 +87,7 @@ export default function Home() {
                             (
                                 <motion.div
                                     whileTap={{ scale: 0.97 }}
-                                    className='md:hidden object-contain rounded-full p-4 ' onClick={() => setMenu(false)}>
+                                    className='lg:hidden object-contain rounded-full p-4 hover:cursor-pointer' onClick={() => setMenu(false)}>
                                     <Image
                                         src="/close.png"
                                         width={20}
@@ -99,36 +100,34 @@ export default function Home() {
                             :
                             (
                                 <motion.div
-                                    initial={{ opacity: 0.6 }}
-                                    whileHover={{
-                                        scale: 2,
-                                        transition: { duration: 1 },
-                                    }}
-                                    whileTap={{ scale: 0.9 }}
-                                    whileInView={{ opacity: 1 }}
-                                    className='md:hidden object-contain rounded-full p-4 ' onClick={() => setMenu(true)}>
+                                    className='lg:hidden object-contain rounded-full p-4 hover:cursor-pointer' onClick={() => setMenu(true)}>
                                     <Image
                                         src="/menu.png"
                                         width={20}
                                         height={20}
                                         alt="menu icon"
-                                        className='object-contain'
+                                        className='object-contain '
                                     />
                                 </motion.div>
                             )
                     }
-                    <div className={`${raleway.className} hidden md:flex md:justify-evenly md:items-center  md:w-92 space-x-12`}>
+                    <div className={`${raleway.className} hidden lg:flex lg:justify-evenly lg:items-center  lg:w-92 space-x-12`}>
                         <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Certifications</Link>
                         <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Live Projects</Link>
                         <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Guidance</Link>
                         <Link href="/development" className=' transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  p-2  cursor-pointer'>Find Teammates</Link>
                         <a className='transition ease-in  hover:font-bold hover:scale-125 hover:text-black  text-gray-700  cursor-pointer p-2 '>Contact Us</a>
                     </div>
+
+                    <section className='hidden lg:flex'>
+
                     <Link href="/register">
-                        <div className={`${raleway.className} hidden md:flex cursor-pointer transition bg-black text-white font-bold rounded-lg px-5 py-2 ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
+                        <div className={`${raleway.className}  cursor-pointer transition bg-black text-white font-bold rounded-lg px-5 py-2 ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
                             <h1>Sign In</h1>
                         </div>
                     </Link>
+                    </section>
+
 
                 </motion.div>
                 <motion.nav
@@ -165,7 +164,7 @@ export default function Home() {
                         <motion.a variants={itemVariants} className='text-xl ' href="/development" >Guidance</motion.a>
                         <motion.a variants={itemVariants} className='text-xl ' href="/development" >Platform</motion.a>
 
-                        <motion.a variants={itemVariants} className='text-xl p-2'>Sign In</motion.a>
+                        <motion.a href= "/register" variants={itemVariants} className='text-xl p-2'>Sign In</motion.a>
 
                     </motion.ul>
                 </motion.nav>
@@ -186,6 +185,7 @@ export default function Home() {
             {/* Fourth Section */}
 
             <Fourth />
+            <Timeline />
 
 
             {/* Testimonials Section */}

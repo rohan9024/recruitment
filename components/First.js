@@ -15,8 +15,8 @@ function First() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className='md:flex-row flex-col flex justify-center md:justify-normal items-center space-y-4 md:space-x-32 md:space-y-12  md:mx-28 mx-10 mt-10 md:mt-20'>
-        <div className='hidden md:flex md:w-1/2'>
+        className='lg:flex-row flex-col flex justify-center lg:justify-normal items-center space-y-4 md:space-y-12 lg:space-x-32 lg:space-y-12  lg:mx-28 mx-10 mt-10 lg:mt-20'>
+        <div className='hidden lg:flex lg:w-1/2'>
             <Image
                 src="/first.gif"
                 width={700}
@@ -25,7 +25,7 @@ function First() {
                 className='object-contain'
             />
         </div>
-        <div className='md:hidden flex'>
+        <div className='lg:hidden flex'>
             <Image
                 src="/first.gif"
                 width={700}
@@ -34,9 +34,9 @@ function First() {
                 className=' object-contain'
             />
         </div>
-        <div className={`${raleway.className} md:w-1/2 md:space-y-12 space-y-3 `}>
-            <h1 className=' text-2xl md:text-6xl font-bold tracking-wide'>Experience Matters</h1>
-            <h1 className='text-md md:text-2xl font-normal'>Internships, Certifications, and Real Projects to Launch Your Career</h1>
+        <div className={`${raleway.className} lg:w-1/2 lg:space-y-12 space-y-3 `}>
+            <h1 className=' text-2xl md:text-5xl lg:text-6xl font-bold tracking-wide'>Experience Matters</h1>
+            <h1 className='text-lg md:text-2xl lg:text-2xl font-normal'>Internships, Certifications, and Real Projects to Launch Your Career</h1>
         </div>
 
     </motion.div>

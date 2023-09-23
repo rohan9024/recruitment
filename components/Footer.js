@@ -16,13 +16,13 @@ function Footer() {
     return (
         <div className='flex flex-col bg-black text-gray-300 font-dmsans shadow-t-lg'>
             <div className='flex justify-center items-center bg-gray-200 shadow-b-2xl'>
-                <div className={`${raleway.className}  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
+                <div className={`${raleway.className} p-10 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300`} >
                     <Image
-                        src="/logo-3.png"
-                        width={200}
-                        height={200}
+                        src="/logo.jpg"
+                        width={90}
+                        height={90}
                         alt="logo"
-                        className='object-contain'
+                        className='object-contain rounded-full'
                     />
                 </div>
             </div>

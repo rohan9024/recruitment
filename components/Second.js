@@ -18,12 +18,12 @@ function Second() {
     return (
         <>
             {/* Hidden on large screens */}
-            <div className='md:hidden flex flex-col mx-10 mt-20 '>
+            <div className='lg:hidden flex flex-col mx-10 mt-20 '>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.7 }}
-                    className='flex flex-col items-center space-y-5'>
+                    className='flex flex-col items-center space-y-5 md:space-y-10 md:items-start'>
                     <div className=''>
                         <Image
                             src="/second.gif"
@@ -34,14 +34,14 @@ function Second() {
                         />
                     </div>
                     <div className={`${raleway.className}  space-y-5 my-6`}>
-                        <h1 className='text-2xl font-bold'>Certify Your Success<br /></h1>
-                        <h1 className='text-md font-normal'>Hands-On Learning, Certified Skills, and a Brighter Future</h1>
+                        <h1 className='text-2xl md:text-5xl font-bold'>Certify Your Success<br /></h1>
+                        <h1 className='text-lg md:text-2xl font-normal'>Hands-On Learning, Certified Skills, and a Brighter Future</h1>
                     </div>
                 </motion.div>
             </div>
             {/* Hidden on mobile screens */}
 
-            <div className='hidden md:flex flex-col mx-32 mt-20'>
+            <div className='hidden lg:flex flex-col mx-32 mt-20'>
 
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -50,7 +50,7 @@ function Second() {
                     className='flex items-center space-x-12 space-y-12 '>
 
                     <div className={`${raleway.className} w-1/2 space-y-12`}>
-                        <h1 className=' text-6xl font-bold'>Project to Profession<br /></h1>
+                        <h1 className=' text-6xl font-bold'>Certify Your Success<br /></h1>
                         <h1 className='text-2xl font-normal'>Hands-On Learning, Certified Skills, and a Brighter Future</h1>
                     </div>
                     <div className='w-1/2'>
